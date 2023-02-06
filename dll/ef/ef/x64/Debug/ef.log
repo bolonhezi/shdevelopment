@@ -1,0 +1,15 @@
+﻿  pch.cpp
+C:\Codes\Visual Studio\ef\ef\pch.cpp(11,17): error C2485: 'naked': atributo estendido não reconhecido
+C:\Codes\Visual Studio\ef\ef\pch.cpp(13,5): error C4235: extensão não padrão usada: palavra-chave '__asm' sem suporte nesta arquitetura
+C:\Codes\Visual Studio\ef\ef\pch.cpp(15,9): error C2065: 'push': identificador não declarado
+C:\Codes\Visual Studio\ef\ef\pch.cpp(15,14): error C2146: erro de sintaxe: ';' ausente antes do identificador 'ebx'
+C:\Codes\Visual Studio\ef\ef\pch.cpp(15,14): error C2065: 'ebx': identificador não declarado
+C:\Codes\Visual Studio\ef\ef\pch.cpp(17,9): error C2146: erro de sintaxe: ';' ausente antes do identificador 'lea'
+C:\Codes\Visual Studio\ef\ef\pch.cpp(17,9): error C2065: 'lea': identificador não declarado
+C:\Codes\Visual Studio\ef\ef\pch.cpp(17,13): error C2146: erro de sintaxe: ';' ausente antes do identificador 'ebx'
+C:\Codes\Visual Studio\ef\ef\pch.cpp(17,13): error C2065: 'ebx': identificador não declarado
+C:\Codes\Visual Studio\ef\ef\pch.cpp(18,9): error C2760: erro de sintaxe: 'movzx' não era esperado aqui; o esperado era '{'
+C:\Codes\Visual Studio\ef\ef\pch.cpp(18,15): error C2065: 'eax': identificador não declarado
+C:\Codes\Visual Studio\ef\ef\pch.cpp(18,20): error C2065: 'word': identificador não declarado
+C:\Codes\Visual Studio\ef\ef\pch.cpp(18,25): error C2146: erro de sintaxe: ',' ausente antes do identificador 'ptr'
+C:\Codes\Visual Studio\ef\ef\pch.cpp(27,1): warning C4326: tipo de retorno de 'main' deve ser 'int' em vez de 'void'
