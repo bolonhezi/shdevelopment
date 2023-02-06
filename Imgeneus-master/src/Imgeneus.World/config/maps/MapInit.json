@@ -1,0 +1,161 @@
+{
+  "maps": [
+    {
+      "MapId": 0,
+      "MapType": "Field",
+      "WeatherState": "Rain",
+      "WeatherPower": "Light",
+      "WeatherDuration": 30,
+      "NoneWeatherDuration": 30
+    },
+    {
+      "MapId": 1,
+      "MapType": "Field",
+      "WeatherState": "Rain",
+      "WeatherPower": "Hard",
+      "WeatherDuration": 30,
+      "NoneWeatherDuration": 60
+    },
+    {
+      "MapId": 2,
+      "MapType": "Field",
+      "WeatherState": "Rain",
+      "WeatherPower": "Hard",
+      "WeatherDuration": 30,
+      "NoneWeatherDuration": 60
+    },
+    {
+      "MapId": 5,
+      "MapType": "Dungeon",
+      "CreateType": "Party",
+      "RebirthMap": {
+        "MapId": 1,
+        "PosX": 236,
+        "PosY": 19,
+        "PosZ": 612
+      }
+    },
+    {
+      "MapId": 18,
+      "MapType": "Field",
+      "MaxLevel": 15,
+      "LevelOutMapLight": {
+        "MapId": 1,
+        "PosX": 947.77,
+        "PosY": 8.320,
+        "PosZ": 658.59
+      },
+      "LevelOutMapDark": {
+        "MapId": 2,
+        "PosX": 993.52,
+        "PosY": 53.381,
+        "PosZ": 1114.9
+      }
+    },
+    {
+      "MapId": 19,
+      "MapType": "Field",
+      "WeatherState": "Rain",
+      "WeatherPower": "Light",
+      "WeatherDuration": 30,
+      "NoneWeatherDuration": 60
+    },
+    {
+      "MapId": 20,
+      "MapType": "Field"
+    },
+    {
+      "MapId": 29,
+      "MapType": "Field"
+    },
+    {
+      "MapId": 35,
+      "MapType": "Field"
+    },
+    {
+      "MapId": 36,
+      "MapType": "Field"
+    },
+    {
+      "MapId": 40,
+      "MapType": "Dungeon",
+      "LightRebirthMap": {
+        "MapId": 40,
+        "PosX": 128,
+        "PosY": 3,
+        "PosZ": 82
+      },
+      "DarkRebirthMap": {
+        "MapId": 40,
+        "PosX": 58,
+        "PosY": 3,
+        "PosZ": 82
+      }
+    },
+    {
+      "MapId": 42,
+      "MapType": "Dungeon"
+    },
+    {
+      "MapId": 50,
+      "MapType": "Field",
+      "CreateType": "GRB",
+      "OpenTime": "0 17 * * Sunday",
+      "CloseTime": "0 18 * * Sunday",
+      "LightRebirthMap": {
+        "MapId": 53,
+        "PosX": 50.43,
+        "PosY": 7.09,
+        "PosZ": 86.57
+      },
+      "DarkRebirthMap": {
+        "MapId": 54,
+        "PosX": 97.33,
+        "PosY": 5.89,
+        "PosZ": 42.03
+      }
+    },
+    {
+      "MapId": 51,
+      "MapType": "Field",
+      "CreateType": "GuildHouse",
+      "RebirthMap": {
+        "MapId": 53,
+        "PosX": 50.43,
+        "PosY": 7.09,
+        "PosZ": 86.57
+      }
+    },
+    {
+      "MapId": 52,
+      "MapType": "Field",
+      "CreateType": "GuildHouse",
+      "RebirthMap": {
+        "MapId": 54,
+        "PosX": 97.33,
+        "PosY": 5.89,
+        "PosZ": 42.03
+      }
+    },
+    {
+      "MapId": 53,
+      "MapType": "Dungeon",
+      "RebirthMap": {
+        "MapId": 53,
+        "PosX": 50.43,
+        "PosY": 7.09,
+        "PosZ": 86.57
+      }
+    },
+    {
+      "MapId": 54,
+      "MapType": "Dungeon",
+      "RebirthMap": {
+        "MapId": 54,
+        "PosX": 97.33,
+        "PosY": 5.89,
+        "PosZ": 42.03
+      }
+    }
+  ]
+}

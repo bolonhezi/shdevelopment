@@ -1,0 +1,113 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'SHAIYA_US'
+
+steps:
+  - checkout: self
+    submodules: true
+
+  - task: UseDotNet@2
+    displayName: 'Use .NET 6 Core sdk'
+    inputs:
+      packageType: 'sdk'
+      version: '6.0.x'
+      
+  - task: DotNetCoreCLI@2
+    displayName: Restore Nuget
+    inputs:
+      command: restore
+      projects: '**/*.csproj'
+  
+  - task: DotNetCoreCLI@2
+    displayName: Build projects
+    inputs:
+      command: build
+      projects: '**/Imgeneus.*.csproj'
+      arguments: '--configuration $(buildConfiguration)'
+
+  - task: DotNetCoreCLI@2
+    displayName: Run tests
+    inputs:
+      command: test
+      projects: '**/*Tests/Imgeneus.*.csproj'
+      arguments: '--configuration $(buildConfiguration)'
+
+  - task: DotNetCoreCLI@2
+    displayName: Publish
+    inputs:
+      command: publish
+      publishWebProjects: false
+      arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+      zipAfterPublish: True
+  
+  # this code takes all the files in $(Build.ArtifactStagingDirectory) and uploads them as an artifact of your build.
+  - task: PublishBuildArtifacts@1
+    displayName: Publish build artifacts
+    inputs:
+      pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+      artifactName: 'Imgeneus.Linux'
+
+  - task: DockerCompose@0
+    displayName: 'Build docker images'
+    inputs:
+      containerregistrytype: 'Azure Container Registry'
+      azureSubscription: 'Visual Studio Enterprise – MPN(503236c4-a00c-466c-b7b0-4800e8dec527)'
+      azureContainerRegistry: '{"loginServer":"imgeneusregistrytest.azurecr.io", "id" : "/subscriptions/503236c4-a00c-466c-b7b0-4800e8dec527/resourceGroups/imgeneus-test/providers/Microsoft.ContainerRegistry/registries/imgeneusregistrytest"}'
+      dockerComposeFile: '**/docker-compose.yml'
+      action: 'Build services'
+      projectName: $(Build.Repository.Name)
+      qualifyImageNames: true
+      additionalImageTags: $(Build.BuildId)
+
+  - task: DockerCompose@0
+    displayName: 'Push docker images'
+    inputs:
+      containerregistrytype: 'Azure Container Registry'
+      azureSubscription: 'Visual Studio Enterprise – MPN(503236c4-a00c-466c-b7b0-4800e8dec527)'
+      azureContainerRegistry: '{"loginServer":"imgeneusregistrytest.azurecr.io", "id" : "/subscriptions/503236c4-a00c-466c-b7b0-4800e8dec527/resourceGroups/imgeneus-test/providers/Microsoft.ContainerRegistry/registries/imgeneusregistrytest"}'
+      dockerComposeFile: '**/docker-compose.yml'
+      action: 'Push services'
+      projectName: $(Build.Repository.Name)
+      qualifyImageNames: true
+      additionalImageTags: $(Build.BuildId)
+
+  - task: replacetokens@5
+    displayName: 'Replace passwords in deployment files'
+    inputs:
+      targetFiles: '**/*.yaml'
+      encoding: 'auto'
+      tokenPattern: 'default'
+      writeBOM: true
+      actionOnMissing: 'warn'
+      keepToken: false
+      actionOnNoFiles: 'continue'
+      enableTransforms: false
+      enableRecursion: false
+      useLegacyPattern: false
+      enableTelemetry: true
+  - task: AzureCLI@2
+    displayName: 'Deploy login server'
+    inputs:
+      azureSubscription: 'Visual Studio Enterprise – MPN(503236c4-a00c-466c-b7b0-4800e8dec527)'
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: 'az container create -g imgeneus-test --no-wait --file deploy-login.yaml'
+  - task: AzureCLI@2
+    displayName: 'Deploy world server'
+    inputs:
+      azureSubscription: 'Visual Studio Enterprise – MPN(503236c4-a00c-466c-b7b0-4800e8dec527)'
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: 'az container create -g imgeneus-test --no-wait --file deploy-world.yaml'

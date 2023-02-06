@@ -1,0 +1,88 @@
+{
+  "Maps": [
+    {
+      "MapId": 0,
+      "Obelisks": [
+        {
+          "Id": 0,
+          "PosX": 155.10,
+          "PosY": 39.43,
+          "PosZ": 190.38,
+          "NeutralObeliskMobId": 52,
+          "LightObeliskMobId": 252,
+          "DarkObeliskMobId": 152,
+          "DefaultCountry": "None",
+          "Mobs": [
+            {
+              "PosX": 155.17,
+              "PosY": 39.44,
+              "PosZ": 180.20,
+              "Radius": 1,
+              "NeutralMobId": 77,
+              "LightMobId": 69,
+              "DarkMobId": 73,
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "MapId": 18,
+      "Obelisks": [
+        {
+          "Id": 0,
+          "PosX": 560.34,
+          "PosY": 2.20,
+          "PosZ": 540.20,
+          "NeutralObeliskMobId": 710,
+          "LightObeliskMobId": 712,
+          "DarkObeliskMobId": 711,
+          "DefaultCountry": "None",
+          "Mobs": [
+            {
+              "PosX": 568.00,
+              "PosY": 2.18,
+              "PosZ": 547.99,
+              "Radius": 3,
+              "NeutralMobId": 713,
+              "LightMobId": 715,
+              "DarkMobId": 714,
+              "Count": 2
+            },
+            {
+              "PosX": 551.08,
+              "PosY": 2.39,
+              "PosZ": 531.39,
+              "Radius": 3,
+              "NeutralMobId": 713,
+              "LightMobId": 715,
+              "DarkMobId": 714,
+              "Count": 2
+            },
+            {
+              "PosX": 552.36,
+              "PosY": 2.18,
+              "PosZ": 546.92,
+              "Radius": 3,
+              "NeutralMobId": 713,
+              "LightMobId": 715,
+              "DarkMobId": 714,
+              "Count": 2
+            },
+            {
+              "PosX": 566.08,
+              "PosY": 3.07,
+              "PosZ": 530.88,
+              "Radius": 3,
+              "NeutralMobId": 713,
+              "LightMobId": 715,
+              "DarkMobId": 714,
+              "Count": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

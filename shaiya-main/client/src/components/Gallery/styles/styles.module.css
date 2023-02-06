@@ -1,0 +1,17 @@
+.gallery {
+    max-width: 1148px;
+    width: 95%;
+    margin: 50px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.play {
+    width: 80px;
+    height: 80px;
+
+    color: rgba(10, 9, 0, 0.8)
+}

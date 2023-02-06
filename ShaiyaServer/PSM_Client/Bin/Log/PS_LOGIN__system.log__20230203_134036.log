@@ -1,0 +1,10 @@
+2023-02-03 13:40:36 PS_LOGIN__system log start (Login01)
+2023-02-03 13:49:24 3 1 SERVICE_CONTROL_STOP
+2023-02-03 13:49:25 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 13:49:25 1 1 T=000:08:00:000, RC=10,RCS=0, RB=163,RBS=0, SC=59,SCS=0, SB=705,SBS=1
+2023-02-03 13:49:25 mgr server disconnection
+2023-02-03 13:49:25 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 13:49:25 1 1 T=000:08:00:000, RC=1,RCS=0, RB=4,RBS=0, SC=3,SCS=0, SB=62,SBS=0
+2023-02-03 13:49:25 log system server disconnection
+2023-02-03 13:49:25 PS_LOGIN__system log end (Login01)
+2023-02-03 13:49:25 3 1 SService::ServiceCtrlDispatcher(): service shutdown

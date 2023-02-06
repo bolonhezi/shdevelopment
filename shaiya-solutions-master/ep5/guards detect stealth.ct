@@ -1,0 +1,25 @@
+//guards detect stealth by Bowie 12/2019
+[ENABLE]
+004D4180:
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+
+004D4187:
+nop
+nop
+nop
+nop
+nop
+nop
+
+[DISABLE]
+004D4180:
+cmp byte ptr [esi+00001360],00
+
+004D4187:
+jne 004D426B

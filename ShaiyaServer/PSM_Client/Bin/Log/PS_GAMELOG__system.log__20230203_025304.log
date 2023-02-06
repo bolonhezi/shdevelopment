@@ -1,0 +1,26 @@
+2023-02-03 02:53:04 PS_GAMELOG__system log start (GameLog01)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_gameLog.exe, loaded at 0x00400000 - 10/10/18 16:33:52
+2023-02-03 02:53:38 connect game
+2023-02-03 02:56:07 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-03 02:56:07 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin2',9,123,'teste2', 70,80144583,1, 1002.250977,9.830119,664.749207, '2023-02-03 02:56:07' ,112, 6666732328015953920,100082,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Operator's Exclusive','0,0,0,0,0,0 (Option:)','2023-02-02 15:54:59','bag=1,slot=6,Count=1'
+2023-02-03 02:56:07 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-03 02:56:07 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin2',9,123,'teste2', 70,80144583,1, 1002.250977,9.830119,664.749207, '2023-02-03 02:56:07' ,112, 6666731438957723648,25059,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Fool's gold','0,0,0,0,0,0 (Option:)','2023-02-02 15:51:44','bag=1,slot=0,Count=9'
+2023-02-03 03:06:19 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-03 03:06:19 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin',2,122,'dev', 70,80144583,1, 1023.255310,6.533942,352.127289, '2023-02-03 03:06:19' ,141, 174,1,7,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Hell's Claw Lv1',NULL,NULL,NULL
+2023-02-03 03:06:20 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-03 03:06:20 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin',2,122,'dev', 70,80144583,1, 1023.255310,6.533942,352.127289, '2023-02-03 03:06:19' ,141, 174,2,8,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Hell's Claw Lv2',NULL,NULL,NULL
+2023-02-03 03:06:20 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-03 03:06:20 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin',2,122,'dev', 70,80144583,1, 1023.255310,6.533942,352.127289, '2023-02-03 03:06:20' ,141, 174,3,9,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Hell's Claw Lv3',NULL,NULL,NULL
+2023-02-03 03:15:34 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-03 03:15:34 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin2',9,123,'teste2', 70,80144583,1, 1080.572754,9.330496,347.570618, '2023-02-03 03:15:34' ,141, 174,1,7,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Hell's Claw Lv1',NULL,NULL,NULL
+2023-02-03 03:15:35 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-03 03:15:35 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin2',9,123,'teste2', 70,80144583,1, 1080.572754,9.330496,347.570618, '2023-02-03 03:15:34' ,141, 174,2,8,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Hell's Claw Lv2',NULL,NULL,NULL
+2023-02-03 03:15:35 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-03 03:15:35 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin2',9,123,'teste2', 70,80144583,1, 1080.572754,9.330496,347.570618, '2023-02-03 03:15:35' ,141, 174,3,9,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Hell's Claw Lv3',NULL,NULL,NULL
+2023-02-03 03:31:12 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 03:31:12 1 1 T=000:37:00:000, RC=387,RCS=0, RB=50199,RBS=22, SC=7,SCS=0, SB=28,SBS=0
+2023-02-03 03:31:12 disconnect game
+2023-02-03 03:31:12 3 1 SERVICE_CONTROL_STOP
+2023-02-03 03:31:12 PS_GAMELOG__system log end (GameLog01)
+2023-02-03 03:31:12 3 1 SService::ServiceCtrlDispatcher(): service shutdown

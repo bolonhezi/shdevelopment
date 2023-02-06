@@ -1,0 +1,420 @@
+def GetPlayer(player):
+	if isinstance(player,int):	
+		connection = SqlConnection(SSE_GetPyConnString())
+		connection.Open()
+		command = connection.CreateCommand()
+		command.CommandText = """SELECT TOP 1 CharName from PS_GameData.dbo.Chars WHERE CharID=@CharID"""
+		command.Parameters.Add(SqlParameter("@CharID", player))
+		rplayer = "";
+		reader = command.ExecuteReader()
+		while reader.Read():
+			rplayer = reader["CharName"]
+		connection.Close()
+		return rplayer
+	else:
+		connection = SqlConnection(SSE_GetPyConnString())
+		connection.Open()
+		command = connection.CreateCommand()
+		command.CommandText = """SELECT TOP 1 CharID from PS_GameData.dbo.Chars WHERE CharName=@CharName"""
+		command.Parameters.Add(SqlParameter("@CharName", player))
+		rplayer = "";
+		reader = command.ExecuteReader()
+		while reader.Read():
+			rplayer = reader["CharID"]
+				
+		connection.Close()
+		return rplayer	
+
+def GetUser(user):
+	if isinstance(user,int):	
+		connection = SqlConnection(SSE_GetPyConnString())
+		connection.Open()
+		command = connection.CreateCommand()
+		command.CommandText = """SELECT TOP 1 UserID from PS_UserData.dbo.Users_Master WHERE UserUID=@uid"""
+		command.Parameters.Add(SqlParameter("@uid", user))
+		ruser = "";
+		reader = command.ExecuteReader()
+		while reader.Read():
+			ruser = reader["UserID"]
+		connection.Close()
+		return ruser
+	else:
+		connection = SqlConnection(SSE_GetPyConnString())
+		connection.Open()
+		command = connection.CreateCommand()
+		command.CommandText = """SELECT TOP 1 UserUID from PS_UserData.dbo.Users_Master WHERE UserID=@id"""
+		command.Parameters.Add(SqlParameter("@id", user))
+		ruser = "";
+		reader = command.ExecuteReader()
+		while reader.Read():
+			ruser = reader["UserUID"]
+		connection.Close()
+		return ruser
+
+def GetItem(item):
+	if isinstance(item,int):	
+		connection = SqlConnection(SSE_GetPyConnString())
+		connection.Open()
+		command = connection.CreateCommand()
+		command.CommandText = """SELECT TOP 1 ItemName from PS_GameDefs.dbo.Items WHERE ItemID=@item"""
+		command.Parameters.Add(SqlParameter("@item", item))
+		ritem = "";
+		reader = command.ExecuteReader()
+		while reader.Read():
+			ritem = reader["ItemName"]
+		connection.Close()
+		return ritem
+	else:
+		connection = SqlConnection(SSE_GetPyConnString())
+		connection.Open()
+		command = connection.CreateCommand()
+		command.CommandText = """SELECT TOP 1 ItemID from PS_GameDefs.dbo.Items WHERE ItemName=@item"""
+		command.Parameters.Add(SqlParameter("@item", item))
+		ritem = "";
+		reader = command.ExecuteReader()
+		while reader.Read():
+			ritem = reader["ItemID"]
+		connection.Close()
+		return ritem
+
+def AlertPlayer(message, player):
+	if (isinstance(player,int) == False):
+		player = GetPlayer(player)
+
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """DECLARE @msgg varchar(MAX) = N'/ntplayer '+CAST(@CharID as varchar(32))+' '+@msg
+
+		DECLARE	@return_value int
+
+		EXEC	@return_value = [PS_GameDefs].[dbo].[Command]
+				@serviceName = N'ps_game',
+				@cmmd = @msgg
+		"""
+	command.Parameters.Add(SqlParameter("@CharID", player))
+	command.Parameters.Add(SqlParameter("@msg", message))
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+	
+def AlertServer(message):
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """DECLARE @msgg varchar(MAX) = N'/nt '+@msg
+
+		DECLARE	@return_value int
+
+		EXEC	@return_value = [PS_GameDefs].[dbo].[Command]
+				@serviceName = N'ps_game',
+				@cmmd = @msgg
+		"""
+	command.Parameters.Add(SqlParameter("@msg", message))
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+
+def KickAll():
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """DECLARE @msgg varchar(MAX) = N'/allout'
+
+		DECLARE	@return_value int
+
+		EXEC	@return_value = [PS_GameDefs].[dbo].[Command]
+				@serviceName = N'ps_game',
+				@cmmd = @msgg
+		"""
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+
+def StopServer():
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """DECLARE @msgg varchar(MAX) = N'/exit'
+
+		DECLARE	@return_value int
+
+		EXEC	@return_value = [PS_GameDefs].[dbo].[Command]
+				@serviceName = N'ps_game',
+				@cmmd = @msgg
+		"""
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+	
+def SetMaxUser(amount):
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """DECLARE @msgg varchar(MAX) = N'/setmaxuser '+@amt
+
+		DECLARE	@return_value int
+
+		EXEC	@return_value = [PS_GameDefs].[dbo].[Command]
+				@serviceName = N'ps_game',
+				@cmmd = @msgg
+		"""
+	command.Parameters.Add(SqlParameter("@amt", amount))
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+
+def KickUser(user):
+	if (isinstance(user,int) == False):
+		user = GetUser(user);
+		
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """DECLARE @msgg varchar(MAX) = N'/kickuid '+@uid
+
+		DECLARE	@return_value int
+
+		EXEC	@return_value = [PS_GameDefs].[dbo].[Command]
+				@serviceName = N'ps_game',
+				@cmmd = @msgg
+		"""
+	command.Parameters.Add(SqlParameter("@uid", user))
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+
+def KickChar(player):
+	if (isinstance(player,int) == False):
+		player = GetPlayer(player);
+		
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """DECLARE @msgg varchar(MAX) = N'/kickcid '+CAST(@id as varchar(32))
+
+		DECLARE	@return_value int
+
+		EXEC	@return_value = [PS_GameDefs].[dbo].[Command]
+				@serviceName = N'ps_game',
+				@cmmd = @msgg
+		"""
+	command.Parameters.Add(SqlParameter("@id", player))
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+
+def NProtectOn():
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """DECLARE @msgg varchar(MAX) = N'/nprotecton'
+
+		DECLARE	@return_value int
+
+		EXEC	@return_value = [PS_GameDefs].[dbo].[Command]
+				@serviceName = N'ps_game',
+				@cmmd = @msgg
+		"""
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+
+def NProtectOff():
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """DECLARE @msgg varchar(MAX) = N'/nprotectoff'
+
+		DECLARE	@return_value int
+
+		EXEC	@return_value = [PS_GameDefs].[dbo].[Command]
+				@serviceName = N'ps_game',
+				@cmmd = @msgg
+		"""
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+
+def ExpBoost(amount):	
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """DECLARE @msgg varchar(MAX) = N'/exp2xenable '+@amt
+
+		DECLARE	@return_value int
+
+		EXEC	@return_value = [PS_GameDefs].[dbo].[Command]
+				@serviceName = N'ps_game',
+				@cmmd = @msgg
+		"""
+	command.Parameters.Add(SqlParameter("@amt", amount))
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+
+def ExpBoostOff():
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """DECLARE @msgg varchar(MAX) = N'/exp2xdisable'
+
+		DECLARE	@return_value int
+
+		EXEC	@return_value = [PS_GameDefs].[dbo].[Command]
+				@serviceName = N'ps_game',
+				@cmmd = @msgg
+		"""
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+
+def SendItemToUserBank(item, user, count=1):
+	if (isinstance(user,int) == False):
+		user = GetUser(user);
+
+	if (isinstance(item,int) == False):
+		item = GetItem(item);		
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """
+	DECLARE @UserID varchar(18), @UserUID bigint, @ItemID int, @ItemCount tinyint, @OrderNumber int, @BuyDate datetime, @ProductCode varchar(20), @Slot tinyint, @empty smallint
+	-- ----------- CONFIG  ------------------
+
+	-- ItemID:
+	SET @ItemID = @iid
+
+	-- Item Count:
+	SET @ItemCount = @cnt
+
+	-- Produkt Description (max. 20 char.)
+	SET @ProductCode = 'LGCYDESCC'
+
+	-- --------------------------------------
+	SET @OrderNumber = 1
+	SET @BuyDate = GETDATE()
+
+	SET @UserUID = @Usr
+
+	SET @Slot = 0
+	SET @empty = -1
+
+	WHILE (@Slot <= 239)
+	BEGIN 
+
+		SET @empty = (SELECT COUNT(Slot) FROM PS_Billing.dbo.Users_Product WHERE UserUID = @UserUID AND Slot = @Slot)
+		
+		IF (@empty <= 0) BREAK
+		ELSE 	
+			SET @Slot = @Slot+1
+	END
+
+	INSERT INTO PS_Billing.dbo.Users_Product 
+			(UserUID, Slot, ItemID, ItemCount, ProductCode, OrderNumber, BuyDate)
+	VALUES (@UserUID, @Slot, @ItemID, @ItemCount, @ProductCode, @OrderNumber, @BuyDate)
+
+	PRINT ''
+	IF @Slot < 239 PRINT 'Used slot: '+CONVERT(varchar(3), @Slot)
+	IF @Slot = 239 PRINT 'THERE IS NO FREE SLOT ANYMORE (240/240 SLOTS USED)!'"""
+	command.Parameters.Add(SqlParameter("@Usr", user))
+	command.Parameters.Add(SqlParameter("@iid", item))
+	command.Parameters.Add(SqlParameter("@cnt", count))
+	reader = command.ExecuteReader()
+	connection.Close()
+	return
+
+def SetItem(Charname, type, typeid, itemid, bag, slot, count):
+	print Charname + ' INSTANTLVL - bag: '+str(bag)+' slot: '+str(slot)+' ItemID: '+str(itemid)
+	connection = SqlConnection(SSE_GetPyConnString())
+	connection.Open()
+	command = connection.CreateCommand()
+	command.CommandText = """SELECT COUNT(*) AS Counter FROM PS_GameData.Dbo.CharItems WHERE CharID = (SELECT CharID FROM PS_GameData.dbo.Chars WHERE Charname = @CharName) AND Bag = @Bag AND Slot = @Slot"""
+	command.Parameters.Add(SqlParameter("@CharName", Charname))
+	command.Parameters.Add(SqlParameter("@Bag", bag))
+	command.Parameters.Add(SqlParameter("@Slot", slot))
+	reader = command.ExecuteReader()
+	Count = 0
+	while reader.Read():
+		Count=reader['Counter']
+	connection.Close()
+	if(Count==0):
+		print 'Empty, lets insert'
+		#INSERT
+		connection = SqlConnection(SSE_GetPyConnString())
+		connection.Open()
+		command = connection.CreateCommand()
+		command.CommandText = """INSERT INTO [PS_GameData].[dbo].[CharItems]
+           ([CharID]
+           ,[ItemID]
+           ,[ItemUID]
+           ,[Type]
+           ,[TypeID]
+           ,[Bag]
+           ,[Slot]
+           ,[Quality]
+           ,[Gem1]
+           ,[Gem2]
+           ,[Gem3]
+           ,[Gem4]
+           ,[Gem5]
+           ,[Gem6]
+           ,[Craftname]
+           ,[Count]
+           ,[Maketime]
+           ,[Maketype]
+           ,[Del])
+           VALUES
+           ((SELECT CharID FROM PS_GameData.dbo.Chars WHERE Charname = @CharName)
+           ,@ItemID
+           ,[PS_GameData].dbo.ItemUID()
+           ,@Type
+           ,@TypeID
+           ,@Bag
+           ,@Slot
+           ,400
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           ,''
+           ,@Count
+           ,GETDATE()
+           ,'S'
+           ,0)"""
+		command.Parameters.Add(SqlParameter("@CharName", Charname))
+		command.Parameters.Add(SqlParameter("@ItemID", itemid))
+		command.Parameters.Add(SqlParameter("@Type", type))
+		command.Parameters.Add(SqlParameter("@TypeID", typeid))
+		command.Parameters.Add(SqlParameter("@Bag", bag))
+		command.Parameters.Add(SqlParameter("@Slot", slot))
+		command.Parameters.Add(SqlParameter("@Count", count))
+		reader = command.ExecuteReader()
+		connection.Close()
+	else:
+		print 'Non-Empty, lets update'
+		#UPDATE
+		connection = SqlConnection(SSE_GetPyConnString())
+		connection.Open()
+		command = connection.CreateCommand()
+		command.CommandText = """UPDATE PS_GameData.Dbo.CharItems SET ItemID = @ItemID, Type = @Type, TypeID = @TypeID, Count = @Count, Craftname = '' WHERE CharID = (SELECT CharID FROM PS_GameData.dbo.Chars WHERE Charname = @CharName) AND Bag = @Bag AND Slot = @Slot"""
+		command.Parameters.Add(SqlParameter("@CharName", Charname))
+		command.Parameters.Add(SqlParameter("@ItemID", itemid))
+		command.Parameters.Add(SqlParameter("@Type", type))
+		command.Parameters.Add(SqlParameter("@TypeID", typeid))
+		command.Parameters.Add(SqlParameter("@Count", count))
+		command.Parameters.Add(SqlParameter("@Bag", bag))
+		command.Parameters.Add(SqlParameter("@Slot", slot))
+		reader = command.ExecuteReader()
+		Count = 0
+		while reader.Read():
+			Count=Count+1
+		connection.Close()
+	return
+
+def DelayAlertServer(msg, wtime):
+	time.sleep(wtime)
+	AlertServer(msg)
+	return

@@ -1,0 +1,49 @@
+﻿@page "/Logs"
+
+@attribute [Authorize(Roles = "SuperAdmin, Admin")]
+
+@using Imgeneus.Monitoring
+@using Microsoft.AspNetCore.SignalR.Client
+
+@inject NavigationManager navigationManager
+
+<h3>Logs</h3>
+
+@if(_logs.Count == 0)
+{
+    <div>No logs yet! Do something in game!</div>
+}
+
+<div class="scrollbox">
+    @foreach (var log in _logs)
+    {
+        <div>@log</div>
+    }
+</div>
+
+@code {
+    private string _hubUrl;
+    private HubConnection _hubConnection;
+    private readonly List<string> _logs = new List<string>();
+
+    protected async override Task OnInitializedAsync()
+    {
+        var baseUrl = navigationManager.BaseUri;
+
+        _hubUrl = baseUrl.TrimEnd('/') + MonitoringHub.HubUrl;
+
+        _hubConnection = new HubConnectionBuilder()
+            .WithUrl(_hubUrl)
+            .Build();
+
+        _hubConnection.On<string>("Broadcast", BroadcastMessage);
+
+        await _hubConnection.StartAsync();
+    }
+
+    private void BroadcastMessage(string message)
+    {
+        _logs.Insert(0, message);
+        StateHasChanged();
+    }
+}

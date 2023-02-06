@@ -1,0 +1,16 @@
+2023-02-02 15:22:43 PS_GAMELOG__system log start (GameLog01)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_gameLog.exe, loaded at 0x00400000 - 10/10/18 16:33:52
+2023-02-02 15:23:15 connect game
+2023-02-02 15:51:44 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-02 15:51:44 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin2',9,123,'teste2', 0,0,1, 932.096436,13.659994,796.399902, '2023-02-02 15:51:44',180, 1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'ItemCreate','','name=Fool's gold,count=10',NULL
+2023-02-02 15:51:44 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-02 15:51:44 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin2',9,123,'teste2', 70,80144583,1, 932.096436,13.659994,796.399902, '2023-02-02 15:51:44' ,111, 6666731438957723648,25059,10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Fool's gold','ItemCreate','0,0,0,0,0,0 (Option:)','2023-02-02 15:51:44'
+2023-02-02 15:54:59 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-02 15:54:59 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin2',9,123,'teste2', 70,80144583,1, 993.214172,14.033777,763.297668, '2023-02-02 15:54:59' ,113, 6666732328015953920,100082,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,'Operator's Exclusive','PointItem','0,0,0,0,0,0 (Option:)','2023-02-02 15:54:59'
+2023-02-02 15:59:50 3 1 SERVICE_CONTROL_STOP
+2023-02-02 15:59:55 1 1 SAgent::Disconnect: (4, 64)
+2023-02-02 15:59:55 1 1 T=000:36:00:000, RC=299,RCS=0, RB=41004,RBS=18, SC=7,SCS=0, SB=28,SBS=0
+2023-02-02 15:59:55 disconnect game
+2023-02-02 15:59:56 PS_GAMELOG__system log end (GameLog01)
+2023-02-02 15:59:56 3 1 SService::ServiceCtrlDispatcher(): service shutdown

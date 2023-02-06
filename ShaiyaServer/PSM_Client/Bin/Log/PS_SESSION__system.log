@@ -1,0 +1,230 @@
+2023-02-02 14:38:54 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-02 14:39:00 connect login
+2023-02-02 14:39:30 connect game
+2023-02-02 14:54:05 1 1 SAgent::Disconnect: (4, 64)
+2023-02-02 14:54:05 1 1 T=000:15:00:000, RC=97,RCS=0, RB=908,RBS=1, SC=11,SCS=0, SB=162,SBS=0
+2023-02-02 14:54:05 disconnect login
+2023-02-02 14:54:05 1 1 SAgent::Disconnect: (4, 64)
+2023-02-02 14:54:05 1 1 T=000:14:00:000, RC=9,RCS=0, RB=141,RBS=0, SC=7,SCS=0, SB=139,SBS=0
+2023-02-02 14:54:05 disconnect game
+2023-02-02 14:54:05 3 1 SERVICE_CONTROL_STOP
+2023-02-02 14:54:05 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-02 14:54:05 1 1 T=000:15:00:000, RC=3,RCS=0, RB=12,RBS=0, SC=4,SCS=0, SB=49,SBS=0
+2023-02-02 14:54:05 log system server disconnection
+2023-02-02 14:54:05 PS_SESSION__system log end (Session)
+2023-02-02 14:54:05 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-02 15:22:43 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-02 15:22:46 connect login
+2023-02-02 15:23:16 connect game
+2023-02-02 15:34:48 [Terra] Error Char Load : InvenItem type=121, typeid=20
+2023-02-02 15:59:48 1 1 SAgent::Disconnect: (4, 64)
+2023-02-02 15:59:48 1 1 T=000:37:00:000, RC=243,RCS=0, RB=2533,RBS=1, SC=31,SCS=0, SB=319,SBS=0
+2023-02-02 15:59:48 disconnect login
+2023-02-02 15:59:51 3 1 SERVICE_CONTROL_STOP
+2023-02-02 15:59:55 1 1 SAgent::Disconnect: (4, 64)
+2023-02-02 15:59:55 1 1 T=000:36:00:000, RC=93,RCS=0, RB=4442,RBS=2, SC=16,SCS=0, SB=551,SBS=0
+2023-02-02 15:59:55 disconnect game
+2023-02-02 15:59:56 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-02 15:59:56 1 1 T=000:37:00:000, RC=7,RCS=0, RB=28,RBS=0, SC=9,SCS=0, SB=86,SBS=0
+2023-02-02 15:59:56 log system server disconnection
+2023-02-02 15:59:56 PS_SESSION__system log end (Session)
+2023-02-02 15:59:56 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-03 02:53:04 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-03 02:53:08 connect login
+2023-02-03 02:53:38 connect game
+2023-02-03 03:31:12 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 03:31:12 1 1 T=000:38:00:000, RC=241,RCS=0, RB=2139,RBS=0, SC=19,SCS=0, SB=213,SBS=0
+2023-02-03 03:31:12 disconnect login
+2023-02-03 03:31:12 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 03:31:12 1 1 T=000:37:00:000, RC=20,RCS=0, RB=233,RBS=0, SC=12,SCS=0, SB=252,SBS=0
+2023-02-03 03:31:12 disconnect game
+2023-02-03 03:31:12 3 1 SERVICE_CONTROL_STOP
+2023-02-03 03:31:12 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 03:31:12 1 1 T=000:38:00:000, RC=7,RCS=0, RB=28,RBS=0, SC=8,SCS=0, SB=65,SBS=0
+2023-02-03 03:31:12 log system server disconnection
+2023-02-03 03:31:12 PS_SESSION__system log end (Session)
+2023-02-03 03:31:12 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-03 04:04:28 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-03 04:04:33 connect login
+2023-02-03 04:05:03 connect game
+2023-02-03 04:05:15 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 04:05:15 1 1 T=000:00:00:000, RC=6,RCS=0, RB=97,RBS=2, SC=4,SCS=0, SB=115,SBS=2
+2023-02-03 04:05:15 disconnect login
+2023-02-03 04:05:15 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 04:05:15 1 1 T=000:00:00:000, RC=3,RCS=0, RB=77,RBS=6, SC=3,SCS=0, SB=30,SBS=2
+2023-02-03 04:05:15 disconnect game
+2023-02-03 04:05:15 3 1 SERVICE_CONTROL_STOP
+2023-02-03 04:05:15 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 04:05:15 1 1 T=000:00:00:000, RC=0,RCS=0, RB=0,RBS=0, SC=1,SCS=0, SB=37,SBS=0
+2023-02-03 04:05:15 log system server disconnection
+2023-02-03 04:05:15 PS_SESSION__system log end (Session)
+2023-02-03 04:05:15 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-03 11:47:19 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-03 11:47:22 connect login
+2023-02-03 11:47:55 connect game
+2023-02-03 12:23:07 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 12:23:07 1 1 T=000:35:00:000, RC=231,RCS=0, RB=2249,RBS=1, SC=26,SCS=0, SB=275,SBS=0
+2023-02-03 12:23:07 disconnect login
+2023-02-03 12:23:10 3 1 SERVICE_CONTROL_STOP
+2023-02-03 12:23:14 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 12:23:14 1 1 T=000:35:00:000, RC=26,RCS=0, RB=329,RBS=0, SC=14,SCS=0, SB=446,SBS=0
+2023-02-03 12:23:14 disconnect game
+2023-02-03 12:23:15 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 12:23:15 1 1 T=000:35:00:000, RC=7,RCS=0, RB=28,RBS=0, SC=8,SCS=0, SB=65,SBS=0
+2023-02-03 12:23:15 log system server disconnection
+2023-02-03 12:23:15 PS_SESSION__system log end (Session)
+2023-02-03 12:23:15 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-03 12:28:14 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-03 12:28:20 connect login
+2023-02-03 12:28:50 connect game
+2023-02-03 12:38:07 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 12:38:07 1 1 T=000:09:00:000, RC=63,RCS=0, RB=644,RBS=1, SC=9,SCS=0, SB=154,SBS=0
+2023-02-03 12:38:07 disconnect login
+2023-02-03 12:38:07 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 12:38:07 1 1 T=000:09:00:000, RC=8,RCS=0, RB=137,RBS=0, SC=5,SCS=0, SB=131,SBS=0
+2023-02-03 12:38:07 disconnect game
+2023-02-03 12:38:07 3 1 SERVICE_CONTROL_STOP
+2023-02-03 12:38:07 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 12:38:07 1 1 T=000:09:00:000, RC=1,RCS=0, RB=4,RBS=0, SC=2,SCS=0, SB=41,SBS=0
+2023-02-03 12:38:07 log system server disconnection
+2023-02-03 12:38:07 PS_SESSION__system log end (Session)
+2023-02-03 12:38:07 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-03 12:46:07 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-03 12:46:10 connect login
+2023-02-03 12:46:41 connect game
+2023-02-03 13:24:13 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 13:24:13 1 1 T=000:38:00:000, RC=249,RCS=0, RB=2579,RBS=1, SC=29,SCS=0, SB=301,SBS=0
+2023-02-03 13:24:13 disconnect login
+2023-02-03 13:24:13 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 13:24:13 1 1 T=000:37:00:000, RC=22,RCS=0, RB=297,RBS=0, SC=14,SCS=0, SB=446,SBS=0
+2023-02-03 13:24:13 disconnect game
+2023-02-03 13:24:13 3 1 SERVICE_CONTROL_STOP
+2023-02-03 13:24:13 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 13:24:13 1 1 T=000:38:00:000, RC=7,RCS=0, RB=28,RBS=0, SC=8,SCS=0, SB=65,SBS=0
+2023-02-03 13:24:13 log system server disconnection
+2023-02-03 13:24:13 PS_SESSION__system log end (Session)
+2023-02-03 13:24:13 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-03 13:26:55 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-03 13:26:59 connect login
+2023-02-03 13:27:31 connect game
+2023-02-03 13:34:36 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 13:34:36 1 1 T=000:07:00:000, RC=52,RCS=0, RB=649,RBS=1, SC=10,SCS=0, SB=163,SBS=0
+2023-02-03 13:34:36 disconnect login
+2023-02-03 13:34:36 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 13:34:36 1 1 T=000:07:00:000, RC=16,RCS=0, RB=601,RBS=1, SC=5,SCS=0, SB=131,SBS=0
+2023-02-03 13:34:36 disconnect game
+2023-02-03 13:34:36 3 1 SERVICE_CONTROL_STOP
+2023-02-03 13:34:36 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 13:34:36 1 1 T=000:07:00:000, RC=1,RCS=0, RB=4,RBS=0, SC=2,SCS=0, SB=41,SBS=0
+2023-02-03 13:34:36 log system server disconnection
+2023-02-03 13:34:36 PS_SESSION__system log end (Session)
+2023-02-03 13:34:36 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-03 13:40:30 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-03 13:40:36 connect login
+2023-02-03 13:41:06 connect game
+2023-02-03 13:49:25 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 13:49:25 1 1 T=000:08:00:000, RC=59,RCS=0, RB=705,RBS=1, SC=10,SCS=0, SB=163,SBS=0
+2023-02-03 13:49:25 disconnect login
+2023-02-03 13:49:25 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 13:49:25 1 1 T=000:08:00:000, RC=28,RCS=0, RB=1297,RBS=2, SC=5,SCS=0, SB=131,SBS=0
+2023-02-03 13:49:25 disconnect game
+2023-02-03 13:49:25 3 1 SERVICE_CONTROL_STOP
+2023-02-03 13:49:25 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 13:49:25 1 1 T=000:08:00:000, RC=1,RCS=0, RB=4,RBS=0, SC=2,SCS=0, SB=41,SBS=0
+2023-02-03 13:49:25 log system server disconnection
+2023-02-03 13:49:25 PS_SESSION__system log end (Session)
+2023-02-03 13:49:25 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-03 14:19:32 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-03 14:19:36 connect login
+2023-02-03 14:20:06 connect game
+2023-02-03 14:47:04 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 14:47:04 1 1 T=000:27:00:000, RC=177,RCS=0, RB=1726,RBS=1, SC=14,SCS=0, SB=180,SBS=0
+2023-02-03 14:47:04 disconnect login
+2023-02-03 14:47:07 3 1 SERVICE_CONTROL_STOP
+2023-02-03 14:47:13 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 14:47:13 1 1 T=000:27:00:000, RC=16,RCS=0, RB=385,RBS=0, SC=9,SCS=0, SB=147,SBS=0
+2023-02-03 14:47:13 disconnect game
+2023-02-03 14:47:14 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 14:47:14 1 1 T=000:27:00:000, RC=5,RCS=0, RB=20,RBS=0, SC=6,SCS=0, SB=57,SBS=0
+2023-02-03 14:47:14 log system server disconnection
+2023-02-03 14:47:14 PS_SESSION__system log end (Session)
+2023-02-03 14:47:14 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-03 15:55:52 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-03 15:55:54 connect login
+2023-02-03 15:56:24 connect game
+2023-02-03 15:56:44 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 15:56:44 1 1 T=000:00:00:000, RC=7,RCS=0, RB=105,RBS=2, SC=4,SCS=0, SB=115,SBS=2
+2023-02-03 15:56:44 disconnect login
+2023-02-03 15:56:44 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 15:56:44 1 1 T=000:00:00:000, RC=3,RCS=0, RB=77,RBS=3, SC=3,SCS=0, SB=30,SBS=1
+2023-02-03 15:56:44 disconnect game
+2023-02-03 15:56:44 3 1 SERVICE_CONTROL_STOP
+2023-02-03 15:56:44 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 15:56:44 1 1 T=000:00:00:000, RC=0,RCS=0, RB=0,RBS=0, SC=1,SCS=0, SB=37,SBS=0
+2023-02-03 15:56:44 log system server disconnection
+2023-02-03 15:56:44 PS_SESSION__system log end (Session)
+2023-02-03 15:56:44 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-03 16:02:14 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-03 16:02:19 connect login
+2023-02-03 16:02:49 connect game
+2023-02-03 16:19:33 [Terra] Error Char Load : Quest id=2818
+2023-02-03 16:19:33 [Terra] Error Char Load : Quest id=2830
+2023-02-03 16:19:33 [Terra] Error Char Load : Quest id=2842
+2023-02-03 16:19:33 [Terra] Error Char Load : Quest id=2854
+2023-02-03 16:24:39 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 16:24:39 1 1 T=000:22:00:000, RC=143,RCS=0, RB=1367,RBS=1, SC=16,SCS=0, SB=201,SBS=0
+2023-02-03 16:24:39 disconnect login
+2023-02-03 16:24:39 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 16:24:39 1 1 T=000:21:00:000, RC=17,RCS=0, RB=1233,RBS=0, SC=9,SCS=0, SB=240,SBS=0
+2023-02-03 16:24:39 disconnect game
+2023-02-03 16:24:39 3 1 SERVICE_CONTROL_STOP
+2023-02-03 16:24:39 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 16:24:39 1 1 T=000:22:00:000, RC=4,RCS=0, RB=16,RBS=0, SC=5,SCS=0, SB=53,SBS=0
+2023-02-03 16:24:39 log system server disconnection
+2023-02-03 16:24:39 PS_SESSION__system log end (Session)
+2023-02-03 16:24:39 3 1 SService::ServiceCtrlDispatcher(): service shutdown
+2023-02-03 20:08:03 PS_SESSION__system log start (Session)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_session.exe, loaded at 0x00400000 - 11/09/14 16:30:56
+2023-02-03 20:08:06 connect login
+2023-02-03 20:08:36 connect game
+2023-02-03 20:09:46 [Terra] Error Char Load : Quest id=2818
+2023-02-03 20:09:46 [Terra] Error Char Load : Quest id=2830
+2023-02-03 20:09:46 [Terra] Error Char Load : Quest id=2842
+2023-02-03 20:09:46 [Terra] Error Char Load : Quest id=2854
+2023-02-03 20:17:26 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 20:17:26 1 1 T=000:09:00:000, RC=62,RCS=0, RB=731,RBS=1, SC=12,SCS=0, SB=181,SBS=0
+2023-02-03 20:17:26 disconnect login
+2023-02-03 20:17:29 3 1 SERVICE_CONTROL_STOP
+2023-02-03 20:17:29 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 20:17:29 1 1 T=000:08:00:000, RC=16,RCS=0, RB=1237,RBS=2, SC=6,SCS=0, SB=228,SBS=0
+2023-02-03 20:17:29 disconnect game
+2023-02-03 20:17:30 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 20:17:30 1 1 T=000:09:00:000, RC=1,RCS=0, RB=4,RBS=0, SC=2,SCS=0, SB=41,SBS=0
+2023-02-03 20:17:30 log system server disconnection
+2023-02-03 20:17:30 PS_SESSION__system log end (Session)
+2023-02-03 20:17:30 3 1 SService::ServiceCtrlDispatcher(): service shutdown

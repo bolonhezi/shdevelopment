@@ -1,0 +1,22 @@
+2023-02-03 12:28:16 PS_DBAGENT__system log start (DBAgent01)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_dbAgent.exe, loaded at 0x00400000 - 11/09/14 16:20:57
+2023-02-03 12:28:50 ### Connect[4916] : Game[?][0x01558DF8], Addr=127.0.0.1, DBJobEnd=1
+2023-02-03 12:28:50 ### DB_SYSTEM_CONNECT[2164] :Game[1][0x01558DF8], Name=Game01, Addr=127.0.0.1
+2023-02-03 12:28:50 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'Rank'., SQL STATE: 42S22, NATIVE ERROR: 207 (0xCF)
+2023-02-03 12:28:50 LoadGuildList failed qerr=-1, EXEC usp_Read_Guild2_R
+2023-02-03 12:28:50 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'Rank'., SQL STATE: 42S22, NATIVE ERROR: 207 (0xCF)
+2023-02-03 12:28:50 LoadGuildList failed qerr=-1, EXEC usp_Read_Guild2_R
+2023-02-03 12:28:50 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'Rank'., SQL STATE: 42S22, NATIVE ERROR: 207 (0xCF)
+2023-02-03 12:28:50 LoadGuildList failed qerr=-1, EXEC usp_Read_Guild2_R
+2023-02-03 12:38:07 1 1 SAgent::Disconnect: (4, 64)
+2023-02-03 12:38:07 1 1 T=000:09:00:000, RC=17,RCS=0, RB=561,RBS=1, SC=24,SCS=0, SB=5561,SBS=9
+2023-02-03 12:38:07 ### Disconnect[2164] : Game[1][0x01558DF8], Name=Game01, Addr=127.0.0.1, DBJobEnd=0
+2023-02-03 12:38:07 ### PostDispatchDB[2164] : DB_DISPATCHER_EXIT Game[1][0x01558DF8]
+2023-02-03 12:38:07 ### OnDispatchDB[9468] : => DB_DISPATCHER_EXIT Game[1][0x01558DF8]
+2023-02-03 12:38:07 ### Save[9468] : Game[1][0x01558DF8]
+2023-02-03 12:38:07 ### OnDispatchDB[9468] : <= DB_DISPATCHER_EXIT Game[1][0x01558DF8]
+2023-02-03 12:38:07 3 1 SERVICE_CONTROL_STOP
+2023-02-03 12:38:07 PS_DBAGENT__system log end (DBAgent01)
+
+2023-02-03 12:38:07 3 1 SService::ServiceCtrlDispatcher(): service shutdown

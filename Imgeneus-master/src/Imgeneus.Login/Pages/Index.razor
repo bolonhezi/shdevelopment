@@ -1,0 +1,28 @@
+﻿@page "/"
+@using Imgeneus.Authentication.Context
+
+@inject ILoginServer _loginServer;
+@inject IUsersDatabase _database;
+
+<PageTitle>Home</PageTitle>
+
+<h1>Welcome to imgeneus login admin panel!</h1>
+
+<div class="alert alert-secondary" role="alert">
+    Hint: if it's first-time, when you run server, click "Register" link and create the first Super Admin account.
+</div>
+
+<h2>Open TPC connections: @GetNumberOfConnections()</h2>
+<h2>Registered players: @GetNumberOfRegisteredUsers()</h2>
+
+@code {
+    private int GetNumberOfConnections()
+    {
+        return _loginServer.ConnectedUsers.Count();
+    }
+
+    private int GetNumberOfRegisteredUsers()
+    {
+        return _database.Users.Count();
+    }
+}

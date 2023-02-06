@@ -1,0 +1,59 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Imgeneus admin panel</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+
+            <AuthorizeView Roles="SuperAdmin, Admin">
+                <NavLink class="nav-link" href="Players" Match="NavLinkMatch.All">
+                    <span class="oi oi-people" aria-hidden="true"></span> Players
+                </NavLink>
+            </AuthorizeView>
+
+            <AuthorizeView Roles="SuperAdmin, Admin">
+                <NavLink class="nav-link" href="Maps" Match="NavLinkMatch.All">
+                    <span class="oi oi-map-marker" aria-hidden="true"></span> Maps
+                </NavLink>
+            </AuthorizeView>
+
+            <AuthorizeView Roles="SuperAdmin, Admin">
+                <NavLink class="nav-link" href="TcpConnections" Match="NavLinkMatch.All">
+                    <span class="oi oi-wifi" aria-hidden="true"></span> TCP connections
+                </NavLink>
+            </AuthorizeView>
+
+            <AuthorizeView Roles="SuperAdmin, Admin">
+                <NavLink class="nav-link" href="Logs" Match="NavLinkMatch.All">
+                    <span class="oi oi-justify-left" aria-hidden="true"></span> Logs
+                </NavLink>
+            </AuthorizeView>
+
+            <AuthorizeView Roles="SuperAdmin, Admin">
+                <NavLink class="nav-link" href="Settings" Match="NavLinkMatch.All">
+                    <span class="oi oi-cog" aria-hidden="true"></span> Settings
+                </NavLink>
+            </AuthorizeView>
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

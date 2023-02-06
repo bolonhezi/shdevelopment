@@ -1,0 +1,13 @@
+//allows skills in stealth by Bowie 12/2019
+[ENABLE]
+0045139B:
+nop
+nop
+nop
+nop
+nop
+nop
+
+[DISABLE]
+0045139B:
+jne 0045174A

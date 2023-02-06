@@ -1,0 +1,23 @@
+//gm can mount while invisible by Bowie 02/2020
+[ENABLE]
+alloc(newmem,128)
+label(return)
+label(exit)
+//will appear visible but is invisible to others
+newmem:
+mov al,01 //move value 01 into an 8-bit register
+mov [edi+00005814],al //make the offset value 01
+mov [edi+0000147C],edx //and mount the character
+
+exit:
+jmp return
+
+0049DBDE:
+jmp newmem
+nop
+return:
+
+[DISABLE]
+dealloc(newmem)
+0049DBDE:
+mov [edi+0000147C],edx

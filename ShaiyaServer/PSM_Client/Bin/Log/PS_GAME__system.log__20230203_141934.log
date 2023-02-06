@@ -1,0 +1,66 @@
+2023-02-03 14:19:34 PS_GAME__system log start (Game01) [Sh_EPVP]
+2023-02-03 14:19:34 RandomOption Error : ItemID=120123, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120124, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120125, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120156, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120157, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120158, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120159, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120160, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120161, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120162, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120163, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120164, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120165, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120166, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120167, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120168, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120169, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120170, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120171, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120172, byServer=2, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120173, byServer=1, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120174, byServer=1, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120175, byServer=1, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120176, byServer=1, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120177, byServer=1, Wis=0
+2023-02-03 14:19:34 RandomOption Error : ItemID=120178, byServer=1, Wis=0
+2023-02-03 14:20:06 connect mgr 1856
+2023-02-03 14:20:06 Server Version : 0
+2023-02-03 14:20:06 connect dbagent 1860
+2023-02-03 14:20:06 connect gamelog 1864
+2023-02-03 14:20:06 Market End -----------------------
+2023-02-03 14:20:07 cannot open .\Data\Lua\147.lua: No such file or directory
+2023-02-03 14:20:07 cannot open .\Data\Lua\133.lua: No such file or directory
+2023-02-03 14:20:07 cannot open .\Data\Lua\161.lua: No such file or directory
+2023-02-03 14:20:07 cannot open .\Data\Lua\160.lua: No such file or directory
+2023-02-03 14:20:07 cannot open .\Data\Lua\162.lua: No such file or directory
+2023-02-03 14:20:07 Start CWorldSendThread=15108
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_game.exe, loaded at 0x00400000 - 11/09/14 17:10:08
+2023-02-03 14:47:04 3 1 SERVICE_CONTROL_STOP
+2023-02-03 14:47:04 Call save all waiting...
+2023-02-03 14:47:13 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 14:47:13 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 14:47:13 1 1 T=000:27:00:000, RC=9,RCS=0, RB=147,RBS=0, SC=16,SCS=0, SB=385,SBS=0
+2023-02-03 14:47:13 1 1 T=000:27:00:000, RC=28,RCS=0, RB=6141,RBS=3, SC=339,SCS=0, SB=5049,SBS=3
+2023-02-03 14:47:13 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 14:47:13 1 1 T=000:27:00:000, RC=5,RCS=0, RB=20,RBS=0, SC=8,SCS=0, SB=146,SBS=0
+2023-02-03 14:47:13 discon mgr ((3,1236, 147,385)
+2023-02-03 14:47:13 discon dbagent ((3,1236, 6141,5049)
+2023-02-03 14:47:13 mgr Connection Lost INFO : T=000:27:00:000, RC=9,RCS=0, RB=147,RBS=0, SC=16,SCS=0, SB=385,SBS=0
+2023-02-03 14:47:13 mgr server disconnection
+2023-02-03 14:47:13 dbagent Connection Lost INFO : T=000:27:00:000, RC=28,RCS=0, RB=6141,RBS=3, SC=339,SCS=0, SB=5049,SBS=3
+2023-02-03 14:47:13 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 14:47:13 discon userlog ((3,1236, 20,146)
+2023-02-03 14:47:13 db agent server disconnected...
+2023-02-03 14:47:13 userlog Connection Lost INFO : T=000:27:00:000, RC=5,RCS=0, RB=20,RBS=0, SC=8,SCS=0, SB=146,SBS=0
+2023-02-03 14:47:13 userlog log server disconnection
+2023-02-03 14:47:13 1 1 T=000:27:00:000, RC=5,RCS=0, RB=20,RBS=0, SC=278,SCS=0, SB=34821,SBS=21
+2023-02-03 14:47:13 call disconnectAll...
+2023-02-03 14:47:13 discon gamelog ((3,1236, 20,34821)
+2023-02-03 14:47:13 gamelog Connection Lost INFO : T=000:27:00:000, RC=5,RCS=0, RB=20,RBS=0, SC=278,SCS=0, SB=34821,SBS=21
+2023-02-03 14:47:13 game log server disconnection
+2023-02-03 14:47:13 server shutdown Connection INFO : T=000:27:00:000, NumC=0,CMin=0,CMax=1,CAvg=0.00, CAva=1,CReq=1,CCnt=1,DCCnt=1, CTimeT=000:26:00:000,CTimeAvg=000:26:00:000, RBT=58947,RBS=35,RBSC=36,SBT=146672,SBS=88,SBSC=91
+2023-02-03 14:47:13 PS_GAME__system log end (Game01)
+2023-02-03 14:47:13 3 1 SService::ServiceCtrlDispatcher(): service shutdown

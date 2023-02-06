@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release;EP8_V1;EP8_V2;SHAIYA_US;SHAIYA_US_DEBUG</Configurations>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\submodules\LiteNetwork\src\LiteNetwork\LiteNetwork.csproj" />
+    <ProjectReference Include="..\..\submodules\Sylver.HandlerInvoker\src\Sylver.HandlerInvoker\Sylver.HandlerInvoker.csproj" />
+    <ProjectReference Include="..\Imgeneus.Database\Imgeneus.Database.csproj" />
+    <ProjectReference Include="..\Imgeneus.InterServer\Imgeneus.InterServer.csproj" />
+  </ItemGroup>
+
+</Project>

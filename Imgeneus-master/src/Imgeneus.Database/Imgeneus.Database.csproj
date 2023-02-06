@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+    <Configurations>Debug;Release;SHAIYA_US_DEBUG</Configurations>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130</SSDTPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\20200111213029_ChangePasswordLength.cs" />
+    <Compile Remove="Migrations\20200111213029_ChangePasswordLength.Designer.cs" />
+    <Compile Remove="Migrations\20200112193356_AddSkillsTable.cs" />
+    <Compile Remove="Migrations\20200112193356_AddSkillsTable.Designer.cs" />
+    <Compile Remove="Migrations\20200112203101_AddSkillsTable.cs" />
+    <Compile Remove="Migrations\20200112203101_AddSkillsTable.Designer.cs" />
+    <Compile Remove="Migrations\20200112213355_AddSkillsTable.cs" />
+    <Compile Remove="Migrations\20200112213355_AddSkillsTable.Designer.cs" />
+    <Compile Remove="Migrations\20200301200636_AddManyToManyCharacterSkills.cs" />
+    <Compile Remove="Migrations\20200301200636_AddManyToManyCharacterSkills.Designer.cs" />
+    <Compile Remove="Migrations\20200308100240_AddDbCharacterSkill.cs" />
+    <Compile Remove="Migrations\20200308100240_AddDbCharacterSkill.Designer.cs" />
+    <Compile Remove="Migrations\20200308100426_AddDbCharacterSkill.cs" />
+    <Compile Remove="Migrations\20200308100426_AddDbCharacterSkill.Designer.cs" />
+    <Compile Remove="Migrations\20200321115415_AddItemsTable.cs" />
+    <Compile Remove="Migrations\20200321115415_AddItemsTable.Designer.cs" />
+    <Compile Remove="Migrations\20200321115508_AddItemsTable.cs" />
+    <Compile Remove="Migrations\20200321115508_AddItemsTable.Designer.cs" />
+    <Compile Remove="Migrations\20200321122019_AddItemsTable.cs" />
+    <Compile Remove="Migrations\20200321122019_AddItemsTable.Designer.cs" />
+    <Compile Remove="Migrations\20200404080923_AddMob.cs" />
+    <Compile Remove="Migrations\20200404080923_AddMob.Designer.cs" />
+    <Compile Remove="Migrations\20200404081205_AddMob.cs" />
+    <Compile Remove="Migrations\20200404081205_AddMob.Designer.cs" />
+    <Compile Remove="Migrations\20200404083003_AddMob.cs" />
+    <Compile Remove="Migrations\20200404083003_AddMob.Designer.cs" />
+    <Compile Remove="Migrations\20200404083444_AddMob.cs" />
+    <Compile Remove="Migrations\20200404083444_AddMob.Designer.cs" />
+    <Compile Remove="Migrations\20200404083638_AddMob.cs" />
+    <Compile Remove="Migrations\20200404083638_AddMob.Designer.cs" />
+    <Compile Remove="Migrations\20200404085529_AddMobItems.cs" />
+    <Compile Remove="Migrations\20200404085529_AddMobItems.Designer.cs" />
+    <Compile Remove="Migrations\20200408181336_AddCharacterActiveBuffs1.cs" />
+    <Compile Remove="Migrations\20200408181336_AddCharacterActiveBuffs1.Designer.cs" />
+    <Compile Remove="Migrations\20200423124511_AddQuickSkillBarItem.cs" />
+    <Compile Remove="Migrations\20200423124511_AddQuickSkillBarItem.Designer.cs" />
+    <Compile Remove="Migrations\20200423131043_AddQuickSkillBarItemRequired.cs" />
+    <Compile Remove="Migrations\20200423131043_AddQuickSkillBarItemRequired.Designer.cs" />
+    <Compile Remove="Migrations\20200423132404_AddQuickSkillBarItem2.cs" />
+    <Compile Remove="Migrations\20200423132404_AddQuickSkillBarItem2.Designer.cs" />
+    <Compile Remove="Migrations\20200824091733_AddNPCs.cs" />
+    <Compile Remove="Migrations\20200824091733_AddNPCs.Designer.cs" />
+    <Compile Remove="Migrations\20200826083934_AddQuests.cs" />
+    <Compile Remove="Migrations\20200826083934_AddQuests.Designer.cs" />
+    <Compile Remove="Migrations\20200826085724_AddQuests.cs" />
+    <Compile Remove="Migrations\20200826085724_AddQuests.Designer.cs" />
+    <Compile Remove="Migrations\20200903190435_AddCharacterFriends.cs" />
+    <Compile Remove="Migrations\20200903190435_AddCharacterFriends.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.5" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\submodules\Parsec\src\Parsec\Parsec.csproj" />
+    <ProjectReference Include="..\Imgeneus.Core\Imgeneus.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+</Project>

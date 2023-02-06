@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	<Configurations>Debug;Release;EP8_V1;EP8_V2;SHAIYA_US;SHAIYA_US_DEBUG</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='SHAIYA_US'">
+    <Optimize>True</Optimize>
+    <DefineConstants>SHAIYA_US</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Macross.Json.Extensions" Version="2.2.0" />
+    <PackageReference Include="NCrontab.Signed" Version="3.3.2" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\submodules\Imgeneus.Authentication\Imegeneus.Authentication\Imgeneus.Authentication.csproj" />
+    <ProjectReference Include="..\Imgeneus.Database\Imgeneus.Database.csproj" />
+    <ProjectReference Include="..\Imgeneus.GameDefinitions\Imgeneus.GameDefinitions.csproj" />
+    <ProjectReference Include="..\Imgeneus.Logs\Imgeneus.Logs.csproj" />
+    <ProjectReference Include="..\Imgeneus.Network\Imgeneus.Network.csproj" />
+  </ItemGroup>
+
+</Project>

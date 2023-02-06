@@ -1,0 +1,40 @@
+2023-02-03 02:53:05 PS_GAME__system log start (Game01) [Sh_EPVP]
+2023-02-03 02:53:38 connect mgr 1828
+2023-02-03 02:53:38 Server Version : 0
+2023-02-03 02:53:38 connect dbagent 1808
+2023-02-03 02:53:38 connect gamelog 1836
+2023-02-03 02:53:38 Market End -----------------------
+2023-02-03 02:53:38 cannot open .\Data\Lua\147.lua: No such file or directory
+2023-02-03 02:53:38 cannot open .\Data\Lua\133.lua: No such file or directory
+2023-02-03 02:53:39 cannot open .\Data\Lua\161.lua: No such file or directory
+2023-02-03 02:53:39 cannot open .\Data\Lua\160.lua: No such file or directory
+2023-02-03 02:53:39 cannot open .\Data\Lua\162.lua: No such file or directory
+2023-02-03 02:53:39 Start CWorldSendThread=1544
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_game.exe, loaded at 0x00400000 - 11/09/14 17:10:08
+2023-02-03 03:31:12 3 1 SERVICE_CONTROL_STOP
+2023-02-03 03:31:12 Call save all waiting...
+2023-02-03 03:31:12 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 03:31:12 1 1 T=000:37:00:000, RC=12,RCS=0, RB=252,RBS=0, SC=20,SCS=0, SB=233,SBS=0
+2023-02-03 03:31:12 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 03:31:12 1 1 T=000:37:00:000, RC=58,RCS=0, RB=11261,RBS=4, SC=394,SCS=0, SB=6429,SBS=2
+2023-02-03 03:31:12 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 03:31:12 1 1 T=000:37:00:000, RC=7,RCS=0, RB=28,RBS=0, SC=11,SCS=0, SB=175,SBS=0
+2023-02-03 03:31:12 1 1 SAgent::Disconnect: (3, 1236)
+2023-02-03 03:31:12 1 1 T=000:37:00:000, RC=7,RCS=0, RB=28,RBS=0, SC=387,SCS=0, SB=50199,SBS=22
+2023-02-03 03:31:12 discon gamelog ((3,1236, 28,50199)
+2023-02-03 03:31:12 gamelog Connection Lost INFO : T=000:37:00:000, RC=7,RCS=0, RB=28,RBS=0, SC=387,SCS=0, SB=50199,SBS=22
+2023-02-03 03:31:12 game log server disconnection
+2023-02-03 03:31:12 discon userlog ((3,1236, 28,175)
+2023-02-03 03:31:12 userlog Connection Lost INFO : T=000:37:00:000, RC=7,RCS=0, RB=28,RBS=0, SC=11,SCS=0, SB=175,SBS=0
+2023-02-03 03:31:12 userlog log server disconnection
+2023-02-03 03:31:12 discon mgr ((3,1236, 252,233)
+2023-02-03 03:31:12 discon dbagent ((3,1236, 11261,6429)
+2023-02-03 03:31:12 mgr Connection Lost INFO : T=000:37:00:000, RC=12,RCS=0, RB=252,RBS=0, SC=20,SCS=0, SB=233,SBS=0
+2023-02-03 03:31:12 dbagent Connection Lost INFO : T=000:37:00:000, RC=58,RCS=0, RB=11261,RBS=4, SC=394,SCS=0, SB=6429,SBS=2
+2023-02-03 03:31:12 mgr server disconnection
+2023-02-03 03:31:12 db agent server disconnected...
+2023-02-03 03:31:12 call disconnectAll...
+2023-02-03 03:31:12 server shutdown Connection INFO : T=000:38:00:000, NumC=0,CMin=0,CMax=2,CAvg=1.00, CAva=2,CReq=2,CCnt=2,DCCnt=2, CTimeT=000:54:00:000,CTimeAvg=000:27:00:000, RBT=26074,RBS=11,RBSC=7,SBT=125261,SBS=54,SBSC=38
+2023-02-03 03:31:12 PS_GAME__system log end (Game01)
+2023-02-03 03:31:12 3 1 SService::ServiceCtrlDispatcher(): service shutdown
