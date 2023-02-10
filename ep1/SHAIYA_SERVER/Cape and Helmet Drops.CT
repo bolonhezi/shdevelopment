@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="29">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"Cape and Helmet Drops"</Description>
+      <Options moManualExpandCollapse="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>0</ID>
+          <Description>"Fortune Bags"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+0044DB7A:
+nop
+nop
+nop
+nop
+nop
+nop//
+nop
+nop
+nop//
+nop
+nop
+nop//
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+//original code
+{0044DB7A   8B88 A0000000    MOV ECX,DWORD PTR DS:[EAX+A0]
+0044DB80   83F9 10          CMP ECX,10
+0044DB83  ^0F84 D7F8FFFF    JE ps_game.0044D460
+0044DB89   83F9 18          CMP ECX,18
+0044DB8C  ^0F84 CEF8FFFF    JE ps_game.0044D460}
+
+[DISABLE]
+0044DB7A:
+mov ecx,[eax+000000A0]
+
+0044DB80:
+cmp ecx,10
+je 0044D460
+
+0044DB89:
+cmp ecx,18
+je 0044D460
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1</ID>
+          <Description>"Mobs"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+0048763A:
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+//original code
+{0048763A   8B86 A0000000    MOV EAX,DWORD PTR DS:[ESI+A0]
+00487640   83F8 10          CMP EAX,10
+00487643   0F84 DF020000    JE ps_game.00487928
+00487649   83F8 18          CMP EAX,18
+0048764C   0F84 D6020000    JE ps_game.00487928}
+
+[DISABLE]
+0048763A:
+mov eax,[esi+000000A0]
+
+00487640:
+cmp eax,10
+je 00487928
+
+00487649:
+cmp eax,18
+je 00487928
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change of cmp ecx,10</Description>
+      <AddressString>ps_game.exe+4DB80</AddressString>
+      <Before>
+        <Byte>88</Byte>
+        <Byte>A0</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>83</Byte>
+        <Byte>F9</Byte>
+        <Byte>10</Byte>
+      </Actual>
+      <After>
+        <Byte>0F</Byte>
+        <Byte>84</Byte>
+        <Byte>D7</Byte>
+        <Byte>F8</Byte>
+        <Byte>FF</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of je ps_game.exe+4D460</Description>
+      <AddressString>ps_game.exe+4DB8C</AddressString>
+      <Before>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+        <Byte>83</Byte>
+        <Byte>F9</Byte>
+        <Byte>18</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>84</Byte>
+        <Byte>CE</Byte>
+        <Byte>F8</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+      </Actual>
+      <After>
+        <Byte>6A</Byte>
+        <Byte>01</Byte>
+        <Byte>50</Byte>
+        <Byte>55</Byte>
+        <Byte>E8</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of cmp ecx,18</Description>
+      <AddressString>ps_game.exe+4DB89</AddressString>
+      <Before>
+        <Byte>84</Byte>
+        <Byte>D7</Byte>
+        <Byte>F8</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+      </Before>
+      <Actual>
+        <Byte>83</Byte>
+        <Byte>F9</Byte>
+        <Byte>18</Byte>
+      </Actual>
+      <After>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of je ps_game.exe+4D460</Description>
+      <AddressString>ps_game.exe+4DB83</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>84</Byte>
+        <Byte>D7</Byte>
+        <Byte>F8</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+      </Actual>
+      <After>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of je ps_game.exe+87928</Description>
+      <AddressString>ps_game.exe+8764C</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>83</Byte>
+        <Byte>F8</Byte>
+        <Byte>18</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>84</Byte>
+        <Byte>D6</Byte>
+        <Byte>02</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>84</Byte>
+        <Byte>24</Byte>
+        <Byte>AC</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of cmp eax,18</Description>
+      <AddressString>ps_game.exe+87649</AddressString>
+      <Before>
+        <Byte>84</Byte>
+        <Byte>DF</Byte>
+        <Byte>02</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>83</Byte>
+        <Byte>F8</Byte>
+        <Byte>18</Byte>
+      </Actual>
+      <After>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of cmp eax,10</Description>
+      <AddressString>ps_game.exe+87640</AddressString>
+      <Before>
+        <Byte>86</Byte>
+        <Byte>A0</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>83</Byte>
+        <Byte>F8</Byte>
+        <Byte>10</Byte>
+      </Actual>
+      <After>
+        <Byte>0F</Byte>
+        <Byte>84</Byte>
+        <Byte>DF</Byte>
+        <Byte>02</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of je ps_game.exe+87928</Description>
+      <AddressString>ps_game.exe+87643</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>84</Byte>
+        <Byte>DF</Byte>
+        <Byte>02</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov eax,[esi+000000A0]</Description>
+      <AddressString>ps_game.exe+8763A</AddressString>
+      <Before>
+        <Byte>84</Byte>
+        <Byte>EE</Byte>
+        <Byte>02</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>86</Byte>
+        <Byte>A0</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+</CheatTable>

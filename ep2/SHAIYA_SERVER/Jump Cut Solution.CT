@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="29">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Jump Cut Solution"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//jump cut solution by Bowie 06/2020
+[ENABLE]
+alloc(newmem,128)
+label(return)
+label(exit)
+
+newmem:
+mov cl,[edi+02]
+cmp cl,02 //if lowest byte is 2
+je 0045174A //don't send packet
+mov word ptr [esp+20],0506
+
+exit:
+jmp return
+
+00451062:
+jmp newmem
+db 90 90 90 90 90
+return:
+
+[DISABLE]
+dealloc(newmem)
+00451062:
+mov cl,[edi+02]
+mov word ptr [esp+20],0506
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

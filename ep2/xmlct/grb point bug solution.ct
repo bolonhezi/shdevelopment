@@ -1,0 +1,8 @@
+//grb point bug solution by Bowie 03/2020
+[ENABLE]
+00427D17:
+db 90 90 90 90
+ 
+[DISABLE]
+00427D17:
+mov edi,[esp+10]

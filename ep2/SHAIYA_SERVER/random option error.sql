@@ -1,0 +1,1 @@
+update ps_gamedefs.dbo.items set server = 0 where reqwis = 0
