@@ -1,0 +1,12 @@
+2021-02-22 21:54:54 PS_LOGIN__system log start (Login01)
+2021-02-22 21:54:58 <Console input> /vchkoff
+2021-02-22 21:54:58 <Console output> cmd version chk off ok
+2021-02-22 21:55:42 3 1 SERVICE_CONTROL_STOP
+2021-02-22 21:55:42 1 1 SAgent::Disconnect: (3, 1236)
+2021-02-22 21:55:42 1 1 SAgent::Disconnect: (3, 1236)
+2021-02-22 21:55:42 1 1 T=000:00:00:000, RC=8,RCS=0, RB=150,RBS=3, SC=8,SCS=0, SB=208,SBS=4
+2021-02-22 21:55:42 mgr server disconnection
+2021-02-22 21:55:42 1 1 T=000:00:00:000, RC=0,RCS=0, RB=0,RBS=0, SC=1,SCS=0, SB=37,SBS=0
+2021-02-22 21:55:42 log system server disconnection
+2021-02-22 21:55:42 PS_LOGIN__system log end (Login01)
+2021-02-22 21:55:42 3 1 SService::ServiceCtrlDispatcher(): service shutdown

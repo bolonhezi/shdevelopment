@@ -1,0 +1,65 @@
+2021-02-22 19:14:31 PS_GAME__system log start (Game01) [GERMANY]
+2021-02-22 19:14:31 RandomOption Error : ItemID=24030, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=24109, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=24128, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=24192, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=39030, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=39107, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=39128, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=39192, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120123, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120124, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120125, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120156, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120157, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120158, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120159, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120160, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120161, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120162, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120163, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120164, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120165, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120166, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120167, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120168, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120169, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120170, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120171, byServer=2, Wis=0
+2021-02-22 19:14:31 RandomOption Error : ItemID=120172, byServer=2, Wis=0
+2021-02-22 19:14:32 connect mgr 1720
+2021-02-22 19:14:32 Server Version : 400000
+2021-02-22 19:14:32 connect dbagent 1724
+2021-02-22 19:14:32 connect gamelog 1736
+2021-02-22 19:14:33 Market End -----------------------
+2021-02-22 19:14:33 Start CWorldSendThread=14772
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_game.exe, loaded at 0x00400000 - 11/09/14 17:10:08
+2021-02-22 19:14:57 <Console input> /nprotectoff
+2021-02-22 19:14:57 <Console output> cmd NProtect off ok
+2021-02-22 19:38:41 3 1 SERVICE_CONTROL_STOP
+2021-02-22 19:38:41 Call save all waiting...
+2021-02-22 19:38:48 1 1 SAgent::Disconnect: (3, 1236)
+2021-02-22 19:38:48 1 1 SAgent::Disconnect: (3, 1236)
+2021-02-22 19:38:48 1 1 T=000:24:00:000, RC=10,RCS=0, RB=245,RBS=0, SC=17,SCS=0, SB=321,SBS=0
+2021-02-22 19:38:48 1 1 T=000:24:00:000, RC=43,RCS=0, RB=9360,RBS=6, SC=131,SCS=0, SB=2387,SBS=1
+2021-02-22 19:38:48 discon mgr ((3,1236, 245,321)
+2021-02-22 19:38:48 discon dbagent ((3,1236, 9360,2387)
+2021-02-22 19:38:48 mgr Connection Lost INFO : T=000:24:00:000, RC=10,RCS=0, RB=245,RBS=0, SC=17,SCS=0, SB=321,SBS=0
+2021-02-22 19:38:48 1 1 SAgent::Disconnect: (3, 1236)
+2021-02-22 19:38:48 mgr server disconnection
+2021-02-22 19:38:48 1 1 T=000:24:00:000, RC=4,RCS=0, RB=16,RBS=0, SC=55,SCS=0, SB=8246,SBS=5
+2021-02-22 19:38:48 dbagent Connection Lost INFO : T=000:24:00:000, RC=43,RCS=0, RB=9360,RBS=6, SC=131,SCS=0, SB=2387,SBS=1
+2021-02-22 19:38:48 discon gamelog ((3,1236, 16,8246)
+2021-02-22 19:38:48 1 1 SAgent::Disconnect: (3, 1236)
+2021-02-22 19:38:48 db agent server disconnected...
+2021-02-22 19:38:48 1 1 T=000:24:00:000, RC=4,RCS=0, RB=16,RBS=0, SC=8,SCS=0, SB=163,SBS=0
+2021-02-22 19:38:48 call disconnectAll...
+2021-02-22 19:38:48 discon userlog ((3,1236, 16,163)
+2021-02-22 19:38:48 gamelog Connection Lost INFO : T=000:24:00:000, RC=4,RCS=0, RB=16,RBS=0, SC=55,SCS=0, SB=8246,SBS=5
+2021-02-22 19:38:48 game log server disconnection
+2021-02-22 19:38:48 userlog Connection Lost INFO : T=000:24:00:000, RC=4,RCS=0, RB=16,RBS=0, SC=8,SCS=0, SB=163,SBS=0
+2021-02-22 19:38:48 userlog log server disconnection
+2021-02-22 19:38:48 server shutdown Connection INFO : T=000:24:00:000, NumC=0,CMin=0,CMax=1,CAvg=0.00, CAva=2,CReq=2,CCnt=2,DCCnt=2, CTimeT=000:21:00:000,CTimeAvg=000:10:00:000, RBT=9452,RBS=6,RBSC=7,SBT=81907,SBS=56,SBSC=62
+2021-02-22 19:38:48 PS_GAME__system log end (Game01)
+2021-02-22 19:38:48 3 1 SService::ServiceCtrlDispatcher(): service shutdown

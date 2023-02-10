@@ -1,0 +1,20 @@
+2021-02-22 20:05:08 PS_GAMELOG__system log start (GameLog01)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_gameLog.exe, loaded at 0x00400000 - 10/10/18 16:33:52
+2021-02-22 20:05:12 connect game
+2021-02-22 21:09:21 1 1 SAgent::Disconnect: (4, 64)
+2021-02-22 21:09:21 1 1 T=001:04:00:000, RC=13,RCS=0, RB=85,RBS=0, SC=12,SCS=0, SB=48,SBS=0
+2021-02-22 21:09:21 disconnect game
+2021-02-22 21:09:48 connect game
+2021-02-22 21:10:35 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'Name2'., SQL STATE: 42S22, NATIVE ERROR: 207 (0xCF)
+2021-02-22 21:10:35 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E '1',1,1,'Ewok', 80,855500000,81, 344.221893,16.918350,182.866776, '2021-02-22 21:10:34' ,107, 255,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL, '26.71.114.173','money=3998362800, bank=0, cash=130747','level=80,skp=1503,stp=0','s=646,d=170,i=8,w=7,r=9,l=15'
+2021-02-22 21:11:00 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'Name2'., SQL STATE: 42S22, NATIVE ERROR: 207 (0xCF)
+2021-02-22 21:11:00 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E '1',1,1,'Ewok', 0,0,81, 342.837341,16.884720,184.938675, '2021-02-22 21:11:00',180, 1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL, 'VisibleOn',NULL,NULL,NULL
+2021-02-22 21:11:19 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'Name2'., SQL STATE: 42S22, NATIVE ERROR: 207 (0xCF)
+2021-02-22 21:11:19 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E '1',1,1,'Ewok', 80,855500000,81, 346.400665,16.884720,179.615341, '2021-02-22 21:11:19' ,108, NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL, 'money=3998362800, bank=0, cash=130747','level=80,skp=1503,stp=0','s=646,d=170,i=8,w=7,r=9,l=15'
+2021-02-22 21:11:31 1 1 SAgent::Disconnect: (4, 64)
+2021-02-22 21:11:31 1 1 T=000:01:00:000, RC=4,RCS=0, RB=396,RBS=3, SC=1,SCS=0, SB=4,SBS=0
+2021-02-22 21:11:31 disconnect game
+2021-02-22 21:11:31 3 1 SERVICE_CONTROL_STOP
+2021-02-22 21:11:31 PS_GAMELOG__system log end (GameLog01)
+2021-02-22 21:11:31 3 1 SService::ServiceCtrlDispatcher(): service shutdown

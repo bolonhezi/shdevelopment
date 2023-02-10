@@ -1,0 +1,16 @@
+2021-02-22 21:17:40 PS_DBAGENT__system log start (DBAgent01)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_dbAgent.exe, loaded at 0x00400000 - 11/09/14 16:20:57
+2021-02-22 21:17:44 ### Connect[4436] : Game[?][0x0148CFD0], Addr=127.0.0.1, DBJobEnd=1
+2021-02-22 21:17:44 ### DB_SYSTEM_CONNECT[3688] :Game[1][0x0148CFD0], Name=Game01, Addr=127.0.0.1
+2021-02-22 21:53:32 1 1 SAgent::Disconnect: (4, 64)
+2021-02-22 21:53:32 1 1 T=000:35:00:000, RC=242,RCS=0, RB=5447,RBS=2, SC=61,SCS=0, SB=13678,SBS=6
+2021-02-22 21:53:32 ### Disconnect[5068] : Game[1][0x0148CFD0], Name=Game01, Addr=127.0.0.1, DBJobEnd=0
+2021-02-22 21:53:32 ### PostDispatchDB[5068] : DB_DISPATCHER_EXIT Game[1][0x0148CFD0]
+2021-02-22 21:53:32 ### OnDispatchDB[18772] : => DB_DISPATCHER_EXIT Game[1][0x0148CFD0]
+2021-02-22 21:53:32 ### Save[18772] : Game[1][0x0148CFD0]
+2021-02-22 21:53:32 ### OnDispatchDB[18772] : <= DB_DISPATCHER_EXIT Game[1][0x0148CFD0]
+2021-02-22 21:53:32 3 1 SERVICE_CONTROL_STOP
+2021-02-22 21:53:32 PS_DBAGENT__system log end (DBAgent01)
+
+2021-02-22 21:53:32 3 1 SService::ServiceCtrlDispatcher(): service shutdown

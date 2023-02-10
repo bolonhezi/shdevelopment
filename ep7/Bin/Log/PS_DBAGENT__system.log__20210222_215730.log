@@ -1,0 +1,12 @@
+2021-02-22 21:57:30 PS_DBAGENT__system log start (DBAgent01)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_dbAgent.exe, loaded at 0x00400000 - 11/09/14 16:20:57
+2021-02-22 22:48:53 3 1 SERVICE_CONTROL_STOP
+2021-02-22 22:48:53 err=-1, [Microsoft][ODBC SQL Server Driver][TCP/IP Sockets]ConnectionWrite (send())., SQL STATE: 01000, NATIVE ERROR: 10054 (0x2746)
+2021-02-22 22:48:53 VerifyReConnect : The Connection has been lost, SQLHDBC=c96ef0
+2021-02-22 22:48:53 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Cannot open database "PS_GameData" requested by the login. The login failed., SQL STATE: 42000, NATIVE ERROR: 4060 (0xFDC)
+2021-02-22 22:48:53 DBKillCountSave db alloc failed
+2021-02-22 22:48:53 SAVE kill count ERROR
+2021-02-22 22:48:53 PS_DBAGENT__system log end (DBAgent01)
+
+2021-02-22 22:48:53 3 1 SService::ServiceCtrlDispatcher(): service shutdown

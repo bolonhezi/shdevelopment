@@ -1,0 +1,4 @@
+2015-09-30 05:01:47 PSMSERVER_AGENT__system log start (PS_AGENT)
+2015-10-07 01:47:07 3 1 SERVICE_CONTROL_STOP
+2015-10-07 01:47:07 PSMSERVER_AGENT__system log end (PS_AGENT)
+2015-10-07 01:47:07 3 1 SService::ServiceCtrlDispatcher(): service shutdown

@@ -1,0 +1,156 @@
+2021-02-22 21:54:53 PS_GAME__system log start (Game01) [GERMANY]
+2021-02-22 21:54:56 RandomOption Error : ItemID=22001, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22002, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22003, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22004, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22005, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22006, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22021, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22022, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22023, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22031, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22032, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22033, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22061, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22062, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22063, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22064, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22065, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22106, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22109, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22112, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22121, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22124, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22127, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22136, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22151, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22152, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22154, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22155, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22156, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22157, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22169, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22170, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22181, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22182, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22183, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22184, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22185, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22186, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22187, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22201, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22202, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22203, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22211, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=22212, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23001, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23002, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23003, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23031, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23032, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23061, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23062, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23106, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23121, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23136, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23151, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23152, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23153, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23166, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23167, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23168, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23211, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23212, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23213, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23214, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23215, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23216, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=23243, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=24032, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=24033, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=24034, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=24035, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=24036, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=24037, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=24038, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=24039, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=24040, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=24128, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=24154, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=39032, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=39033, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=39034, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=39035, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=39036, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=39037, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=39128, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=39154, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40121, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40124, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40136, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40151, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40152, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40153, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40154, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40155, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40181, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40182, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40183, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40184, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40185, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=40186, byServer=4, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120156, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120157, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120158, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120159, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120160, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120161, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120162, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120163, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120164, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120165, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120166, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120168, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120169, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120171, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=120172, byServer=2, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=150042, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=150043, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=150060, byServer=3, Wis=0
+2021-02-22 21:54:56 RandomOption Error : ItemID=150061, byServer=3, Wis=0
+2021-02-22 21:54:57 connect mgr 1720
+2021-02-22 21:54:57 Server Version : 400000
+2021-02-22 21:54:57 connect dbagent 1724
+2021-02-22 21:54:57 connect gamelog 1736
+2021-02-22 21:54:58 Market End -----------------------
+2021-02-22 21:54:58 Start CWorldSendThread=15904
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_game.exe, loaded at 0x00400000 - 11/09/14 17:10:08
+2021-02-22 21:55:04 <Console input> /nprotectoff
+2021-02-22 21:55:04 <Console output> cmd NProtect off ok
+2021-02-22 21:55:42 3 1 SERVICE_CONTROL_STOP
+2021-02-22 21:55:42 Call save all waiting...
+2021-02-22 21:55:42 1 1 SAgent::Disconnect: (3, 1236)
+2021-02-22 21:55:42 1 1 T=000:00:00:000, RC=4,RCS=0, RB=127,RBS=2, SC=5,SCS=0, SB=117,SBS=2
+2021-02-22 21:55:42 1 1 SAgent::Disconnect: (3, 1236)
+2021-02-22 21:55:42 1 1 SAgent::Disconnect: (3, 1236)
+2021-02-22 21:55:42 1 1 T=000:00:00:000, RC=12,RCS=0, RB=4668,RBS=106, SC=9,SCS=0, SB=269,SBS=6
+2021-02-22 21:55:42 1 1 T=000:00:00:000, RC=0,RCS=0, RB=0,RBS=0, SC=3,SCS=0, SB=126,SBS=2
+2021-02-22 21:55:42 discon dbagent ((3,1236, 4668,269)
+2021-02-22 21:55:42 discon userlog ((3,1236, 0,126)
+2021-02-22 21:55:42 dbagent Connection Lost INFO : T=000:00:00:000, RC=12,RCS=0, RB=4668,RBS=106, SC=9,SCS=0, SB=269,SBS=6
+2021-02-22 21:55:42 userlog Connection Lost INFO : T=000:00:00:000, RC=0,RCS=0, RB=0,RBS=0, SC=3,SCS=0, SB=126,SBS=2
+2021-02-22 21:55:42 discon mgr ((3,1236, 127,117)
+2021-02-22 21:55:42 userlog log server disconnection
+2021-02-22 21:55:42 mgr Connection Lost INFO : T=000:00:00:000, RC=4,RCS=0, RB=127,RBS=2, SC=5,SCS=0, SB=117,SBS=2
+2021-02-22 21:55:42 1 1 SAgent::Disconnect: (3, 1236)
+2021-02-22 21:55:42 mgr server disconnection
+2021-02-22 21:55:42 db agent server disconnected...
+2021-02-22 21:55:42 call disconnectAll...
+2021-02-22 21:55:42 1 1 T=000:00:00:000, RC=0,RCS=0, RB=0,RBS=0, SC=1,SCS=0, SB=37,SBS=0
+2021-02-22 21:55:42 discon gamelog ((3,1236, 0,37)
+2021-02-22 21:55:42 gamelog Connection Lost INFO : T=000:00:00:000, RC=0,RCS=0, RB=0,RBS=0, SC=1,SCS=0, SB=37,SBS=0
+2021-02-22 21:55:42 game log server disconnection
+2021-02-22 21:55:42 server shutdown Connection INFO : T=000:00:00:000, NumC=0,CMin=0,CMax=1,CAvg=0.00, CAva=1,CReq=1,CCnt=1,DCCnt=1, CTimeT=000:00:00:000,CTimeAvg=000:00:00:000, RBT=38,RBS=0,RBSC=2,SBT=1377,SBS=28,SBSC=105
+2021-02-22 21:55:42 PS_GAME__system log end (Game01)
+2021-02-22 21:55:42 3 1 SService::ServiceCtrlDispatcher(): service shutdown
