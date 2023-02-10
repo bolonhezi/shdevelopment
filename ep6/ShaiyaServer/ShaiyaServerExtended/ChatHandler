@@ -1,0 +1,76 @@
+<configuration>
+<SQL>ALTER     Proc [dbo].[usp_Insert_Chat_Log_E]
+
+/* 
+Created by humanws, 2005-10-14
+채팅 로그 남기기
+ */
+
+@UserUID int,
+@CharID int,
+@ChatType tinyint,		-- 일반1, 귓말2, 길드3, 파티4, 거래5
+@TargetName varchar(30),
+@ChatData varchar(128),
+@MapID smallint,
+@ChatTime datetime
+
+AS
+
+DECLARE @Sql nvarchar(4000)
+DECLARE @yyyy varchar(4)
+DECLARE @mm varchar(2)
+DECLARE @dd varchar(2)
+DECLARE @CharName varchar(32) = (SELECT CharName FROM PS_GameData.dbo.Chars WHERE CharID = @CharID)
+
+SET @yyyy = DATEPART(yyyy, @ChatTime)
+SET @mm = DATEPART(mm, @ChatTime)
+SET @dd = DATEPART(dd, @ChatTime)
+
+
+IF( LEN(@mm) = 1 )
+BEGIN
+	SET @mm = '0' + @mm
+END
+
+IF( LEN(@dd) = 1 )
+BEGIN
+	SET @dd = '0' + @dd
+END
+
+IF (@ChatData like '!%') AND (SUBSTRING(@ChatData, 2, 1) != ' ')
+	BEGIN
+
+			INSERT INTO [PS_GameLog].[dbo].[ShaiyaServer_Extended]
+					   ([EType]
+					   ,[EDate]
+					   ,[EUserUID]
+					   ,[ECharID]
+					   ,[ECharName]
+					   ,[EArg1]
+					   ,[EOption]
+					   ,[EMap])
+				 VALUES
+					   (0
+					   ,CAST(@ChatTime as varchar(32))
+					   ,@UserUID
+					   ,@CharID
+					   ,@CharName
+					   ,@ChatData
+					   ,'0'
+					   ,@MapID)
+
+	END
+ELSE
+	BEGIN
+		SET @Sql = N'
+		INSERT INTO PS_ChatLog.dbo.ChatLog
+		(UserUID, CharID, ChatType, TargetName, ChatData, MapID, ChatTime)
+		VALUES(@UserUID, @CharID, @ChatType, @TargetName, @ChatData, @MapID, @ChatTime)'
+
+		EXEC sp_executesql @Sql, 
+		N'@UserUID int, @CharID int, @ChatType tinyint, @TargetName varchar(30), @ChatData varchar(128),@MapID smallint, @ChatTime datetime',
+		@UserUID, @CharID, @ChatType, @TargetName, @ChatData, @MapID, @ChatTime
+	END
+
+</SQL>
+</configuration>

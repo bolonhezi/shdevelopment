@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="29">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Ingore Jump Packets"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//jump cut solution by Bowie and alvx9 06/2020
+[ENABLE]
+alloc(newmem,128)
+label(return)
+label(exit)
+{packets for sit/stand/jump
+06 05 01 00 00 00 01 - sit
+06 05 01 00 00 00 00 - stand
+06 05 01 00 00 00 02 - jump}
+newmem: //avoids sending jump packets
+mov cl,[ebp+02]
+cmp cl,02 //if the lowest byte is 02
+je 00479155 //don't send the packet
+mov [esp+22],edx
+//sit and stand packets will be sent
+exit:
+jmp return
+
+0047894D:
+jmp newmem
+nop
+nop
+return:
+
+[DISABLE]
+dealloc(newmem)
+0047894D:
+mov cl,[ebp+02]
+mov [esp+22],edx
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change of je ps_game.exe+78976</Description>
+      <AddressString>ps_game.exe+7895A</AddressString>
+      <Before>
+        <Byte>4C</Byte>
+        <Byte>24</Byte>
+        <Byte>26</Byte>
+        <Byte>84</Byte>
+        <Byte>C0</Byte>
+      </Before>
+      <Actual>
+        <Byte>74</Byte>
+        <Byte>1A</Byte>
+      </Actual>
+      <After>
+        <Byte>8D</Byte>
+        <Byte>54</Byte>
+        <Byte>24</Byte>
+        <Byte>20</Byte>
+        <Byte>52</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of call ps_game.exe+D5250</Description>
+      <AddressString>ps_game.exe+7896C</AddressString>
+      <Before>
+        <Byte>BA</Byte>
+        <Byte>07</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>E8</Byte>
+        <Byte>DF</Byte>
+        <Byte>C8</Byte>
+        <Byte>05</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>E9</Byte>
+        <Byte>DF</Byte>
+        <Byte>07</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov cl,[ebp+02]</Description>
+      <AddressString>ps_game.exe+7894D</AddressString>
+      <Before>
+        <Byte>66</Byte>
+        <Byte>89</Byte>
+        <Byte>4C</Byte>
+        <Byte>24</Byte>
+        <Byte>20</Byte>
+      </Before>
+      <Actual>
+        <Byte>8A</Byte>
+        <Byte>4D</Byte>
+        <Byte>02</Byte>
+      </Actual>
+      <After>
+        <Byte>89</Byte>
+        <Byte>54</Byte>
+        <Byte>24</Byte>
+        <Byte>22</Byte>
+        <Byte>88</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+</CheatTable>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="31">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Enchant Load fix"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>// Created By -RazoR-
+[ENABLE]
+alloc(newmem,2048)
+
+
+newmem:
+movzx eax,word ptr [eax*2+enchantloadpacket]
+jmp 004B8766
+
+
+enchantloadpacket:
+db 00 00  07 00 0E 00 15 00 1F 00 29 00 33 00 40 00 4D 00 5A 00 6A 00 7A 00 8A 00 9D 00 B0 00 C3 00 D9 00 EF 01 05 01 1E 01 37
+
+
+004B8755:
+jmp newmem
+nop
+returnhere:
+
+
+
+
+
+[DISABLE]
+004B8755:
+push eax
+movzx eax,word ptr [esi+30]
+
+
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

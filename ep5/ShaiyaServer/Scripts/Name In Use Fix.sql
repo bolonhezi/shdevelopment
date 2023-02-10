@@ -1,0 +1,1 @@
+DBCC DBReIndex ('PS_GameData.dbo.Chars')

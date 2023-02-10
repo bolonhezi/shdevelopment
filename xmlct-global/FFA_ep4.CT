@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="18">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"FFA Script"</Description>
+      <LastState Activated="0"/>
+      <Color>80000008</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>// FFA //
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(partyonereturnhere)
+label(partyoneoriginalcode)
+label(partyonemem)
+label(partytworeturnhere)
+label(partytwooriginalcode)
+label(partytwomem)
+label(trrreturnhere)
+label(trroriginalcode)
+label(trrmem)
+
+newmem:
+cmp word ptr [eax+164],(int)47
+je 0044BE48
+jmp originalcode
+
+originalcode:
+mov dl,[edx+0000012D]
+jmp returnhere
+
+partyonemem:
+mov dl, byte ptr [edi+164]
+cmp dl,40
+je 004678D6
+cmp dl,2D
+je 004678D6
+cmp dl,2E
+je 004678D6
+cmp dl,2F
+je 004678D6
+cmp dl,2A
+je 004678D6
+cmp word ptr ds:[ebp+164],(int)47
+je 004678CD
+jmp partyoneoriginalcode
+
+partyoneoriginalcode:
+mov dl,[edi+0000012D]
+jmp partyonereturnhere
+
+partytwomem:
+mov dl, byte ptr [esi+164]
+cmp dl,40
+je 004677A7
+cmp dl,2D
+je 004677A7
+cmp dl,2E
+je 004677A7
+cmp dl,2F
+je 004677A7
+cmp dl,2A
+je 004677A7
+mov dl,[esi+0000012D]
+cmp word ptr ds:[ebp+164],(int)47
+je 0046779D
+jmp partytwooriginalcode
+
+partytwooriginalcode:
+mov dl,[esi+0000012D]
+jmp partytworeturnhere
+
+trrmem:
+cmp word ptr ds:[eax+164],(int)47
+je 00465E18
+jmp trroriginalcode
+
+trroriginalcode:
+mov cl,[ebp+0000012D]
+jmp trrreturnhere
+
+0044BE5B:
+jmp newmem
+nop
+returnhere:
+
+004678BF:
+jmp partyonemem
+nop
+partyonereturnhere:
+
+0046778F:
+jmp partytwomem
+nop
+partytworeturnhere:
+
+004664C3:
+jmp trrmem
+nop
+trrreturnhere:
+
+[DISABLE]
+dealloc(newmem)
+
+0044BE5B:
+mov dl,[edx+0000012D]
+
+004678BF:
+mov dl,[edi+0000012D]
+
+0046778F:
+mov dl,[esi+0000012D]
+
+004664C3:
+mov cl,[ebp+0000012D]
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

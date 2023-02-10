@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Auto Assemble script"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+push edx
+mov edx,[ebx+30]
+cmp dword ptr [edx],#25069 // ID completo
+je endless
+cmp dword ptr [edx],#25071
+je endless
+cmp dword ptr [edx],#25072 // ID completo
+je endless
+cmp dword ptr [edx],#25073 // ID completo
+je endless
+cmp dword ptr [edx],#25068 // ID completo
+je endless
+cmp dword ptr [edx],#25070 // ID completo
+je endless
+pop edx
+
+jmp originalcode
+
+endless:
+pop edx
+dec al
+
+cmp al,01
+jbe changeTo255
+
+continue:
+mov [ebx+42],al
+mov edx,0000050A
+mov cl,[ebp+08]
+mov eax,[edi+000000DC]
+mov [esp+12],cl
+movzx ecx,byte ptr [ebx+40]
+mov [esp+14],cl
+movzx ecx,byte ptr [ebx+42]
+mov [esp+0C],dx
+mov dl,[ebp+0C]
+mov [esp+13],dl
+movzx edx,byte ptr [ebx+41]
+mov [esp+16],cl
+mov [esp+0E],eax
+mov [esp+15],dl
+
+push 0B
+lea ecx,[esp+10]
+push ecx
+mov ecx,edi
+call ps_game.exe+ED0E0
+
+pop edi
+pop esi
+pop ebx
+mov esp,ebp
+pop ebp
+ret C
+
+changeTo255:
+mov al,(int)255
+jmp continue
+
+originalcode:
+dec al
+mov [ebx+42],al
+
+exit:
+jmp returnhere
+
+"ps_game.exe"+72ACD:
+jmp newmem
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+"ps_game.exe"+72ACD:
+dec al
+mov [ebx+42],al
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="18">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>9</ID>
+      <Description>"Skill Fix"</Description>
+      <LastState Activated="0"/>
+      <Color>80000008</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,2048)
+alloc(pointerTable,48)
+label(returnhere)
+label(ldSkillJp)
+label(returnhere2)
+label(originalcode2)
+label(returnhere3)
+label(originalcode3)
+label(addskill)
+
+
+004027A1:
+CMP ESI,09
+
+004C0AA2:
+CMP CL,09
+
+004842f5:
+CMP ebx,09
+
+newmem:
+pushad
+pushfd
+
+//alloc space for lvl1
+alloc(skill4, 80000)
+mov [pointerTable],skill4
+alloc(skill5, 80000)
+mov [pointerTable+4],skill5
+alloc(skill6, 80000)
+mov [pointerTable+8],skill6
+alloc(skill7, 80000)
+mov [pointerTable+c],skill7
+alloc(skill8, 80000)
+mov [pointerTable+10],skill8
+alloc(skill9, 80000)
+mov [pointerTable+14],skill9
+
+popfd
+popad
+add esp,0C
+mov ecx,ebp
+jmp returnhere
+
+ldSkillJp:
+cmp ecx, 4
+jl originalcode2
+mov edi,ecx
+sub edi,3
+mov edi,[edi*4+pointerTable-4]
+jmp returnhere2
+
+originalcode2:
+mov edi,[eax+ecx*4+00A8180C]
+jmp returnhere2
+
+
+addskill:
+cmp esi, 4
+jl originalcode3
+mov eax,esi
+sub eax,3
+mov eax,[eax*4+pointerTable-4]
+jmp returnhere3
+
+originalcode3:
+mov eax,[edx+esi*4+00A8180C]
+jmp returnhere3
+
+004C0B5C:
+jmp ldSkillJp
+nop
+nop
+returnhere2:
+
+004027C6:
+jmp addskill
+nop
+nop
+returnhere3:
+
+004C015C:
+jmp newmem
+returnhere:
+
+[DISABLE]
+
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"GM reroll"</Description>
+      <Options moBindActivation="1"/>
+      <LastState Value="" Activated="0" RealAddress="00000000"/>
+      <Color>0000FF</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>0</ID>
+          <Description>"ppp"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+registersymbol(ecxpointer)
+alloc(newmem,2048)
+alloc(ecxpointer,4)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+cdq
+mov [ecxpointer],ecx
+add ecx,01
+idiv ecx
+
+exit:
+jmp returnhere
+
+"ps_game.exe"+BACC3:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"ps_game.exe"+BACC3:
+cdq 
+add ecx,01
+idiv ecx
+//Alt: db 99 83 C1 01 F7 F9
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1</ID>
+          <Description>"rrr"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+mov bl,[ecxpointer]
+movzx dx,bl
+mov [ebp+00],dx
+
+exit:
+jmp returnhere
+
+"ps_game.exe"+BAD02:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"ps_game.exe"+BAD02:
+movzx dx,bl
+mov [ebp+00],dx
+//Alt: db 66 0F B6 D3 66 89 55 00
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"Chats"</Description>
+      <LastState Value="" Activated="0" RealAddress="00000000"/>
+      <Color>8080FF</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>16</ID>
+          <Description>"Cross Faction Trade Chat"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+
+00420E44:
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+
+[DISABLE]
+
+00420E44:
+mov dl,[esp+14]
+cmp dl,[ecx+0000012D]
+jne 00420EDE
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>5</ID>
+          <Description>"Facção verificação cruzada (AH)"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+
+newmem:
+cmp word ptr [edi+164],2A
+je 00469F82
+mov dl,[edi+0000012D]
+jmp returnhere
+
+00469F70:
+jmp newmem
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+
+00469F70:
+mov dl,[edi+0000012D]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>15</ID>
+          <Description>"Chat Privado em todos os mapas"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+
+004706F1:
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+
+
+00471111:
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+
+[DISABLE]
+
+004706F1:
+mov dl,[eax+0000012D]
+cmp dl,[ebx+0000012D]
+jne 004707FE
+
+00471111:
+mov dl,[eax+0000012D]
+cmp dl,[ebx+0000012D]
+jne 0047121E
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>6</ID>
+          <Description>"Chat Privado (AH)"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+
+newmem:
+cmp byte ptr [eax+164],2A
+jne originalcode
+cmp byte ptr [ebx+164],2A
+jne originalcode
+jmp 00470703
+
+originalcode:
+mov dl,[eax+0000012D]
+jmp returnhere
+
+004706F1:
+jmp newmem
+nop
+returnhere:
+
+00471111:
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+
+[DISABLE]
+dealloc(newmem)
+
+004706F1:
+mov dl,[eax+0000012D]
+
+00471111:
+mov dl,[eax+0000012D]
+cmp dl,[ebx+0000012D]
+jne 0047121E
+
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"Kills"</Description>
+      <LastState Value="" Activated="0" RealAddress="00000000"/>
+      <Color>404080</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>11</ID>
+          <Description>"Battlefield Rune"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(applied)
+label(exit)
+
+newmem:
+cmp byte ptr [edi+58bc],0
+jne applied
+//Colocar em Hex//
+originalcode:
+add eax,05 // Kills Normais
+mov [esi],eax
+jmp returnhere
+
+applied:
+add eax,A // Kills quando usar a Runa
+mov [esi],eax
+
+exit:
+jmp returnhere
+
+"ps_game.exe"+5AF71:
+jmp newmem
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+
+"ps_game.exe"+5AF71:
+add eax,01
+mov [esi],eax
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4</ID>
+          <Description>"Duplicar Kills No Mapa:"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+
+newmem:
+pushad
+pushfd
+mov ax,[00400300]
+cmp ax, word ptr [edi+164]
+jne originalcode
+popfd
+popad
+cmp eax,[00541EA0]
+jae 0045B02D
+add eax,02
+mov [esi],eax
+jmp 0045AF76
+
+originalcode:
+popfd
+popad
+cmp eax,[00541EA0]
+jmp returnhere
+
+0045AF65:
+jmp newmem
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+
+0045AF65:
+cmp eax,[00541EA0]
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>18</ID>
+              <Description>"x2 Map"</Description>
+              <LastState Value="0" Activated="0" RealAddress="00400300"/>
+              <Color>80000008</Color>
+              <VariableType>2 Bytes</VariableType>
+              <Address>00400300</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>19</ID>
+          <Description>"Não marca kills nos mapa 39 e 60"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,128)
+label(returnhere)
+label(nokill)
+
+newmem:
+cmp word ptr [edi+164],27
+je nokill
+cmp word ptr [edi+164],3C
+je nokill
+add eax,01
+mov [esi],eax
+jmp returnhere
+
+nokill:
+mov [esi],eax
+jmp returnhere
+
+0045AF71:
+jmp newmem
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+
+0045AF71:
+add eax,01
+mov [esi],eax
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>20</ID>
+      <Description>"Zones"</Description>
+      <LastState Value="" Activated="0" RealAddress="00000000"/>
+      <Color>4080FF</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>7</ID>
+          <Description>"Remove exp mapa 30 e 18"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+
+newmem:
+mov ax,word ptr [edi+164]
+cmp ax,12
+je 0045840D
+cmp ax,1E
+je 0045840D
+mov dl,[edi+0000012F]
+jmp returnhere
+
+00458255:
+jmp newmem
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+
+00458255:
+mov dl,[edi+0000012F]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>21</ID>
+          <Description>"Remove exp de Todos os MAPAS"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+
+00458255:
+nop
+nop
+nop
+nop
+nop
+nop
+
+
+[DISABLE]
+
+00458255:
+mov dl,[edi+0000012F]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>10</ID>
+          <Description>"30buff a distancia"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,2048)
+label(exit)
+label(map18)
+label(map30)
+label(lv18)
+label(lv30)
+
+newmem:
+cmp ecx,09
+ja exit
+cmp dword ptr [esp+04],12
+je map18
+cmp dword ptr [esp+04],1E
+je map30
+jmp exit
+
+map18:
+sub eax,6F
+cmp eax,4A
+ja exit
+movzx eax, byte ptr[eax+lv18]
+cmp eax,ecx
+jae exit
+mov eax,00000002
+ret
+
+map30:
+sub eax,6F
+cmp eax,4A
+ja exit
+movzx eax, byte ptr[eax+lv30]
+cmp eax,ecx
+jae exit
+mov eax,00000002
+ret
+
+exit:
+xor eax,eax
+ret
+
+lv18:
+db 01	// 111 - Tactical Formation
+db 01	// 112 - Leadership
+db 01	// 113 - Trap
+db 01	// 114 - Sprinter
+db 01	// 115 - Mana Shot
+db 01	// 116 - Aura of Peace
+db 01	// 117 - Support Spell
+db 01	// 118 - Dragon Slayer
+db 01	// 119 - Ground Boom
+db 01	// 120 - Incantation
+db 01	// 121 - Marksman Song
+db 01	// 122 - Sustain Shot
+db 01	// 123 - Prayer
+db 01	// 124 - Restore
+db 01	// 125 - Soul Burn
+db 01	// 126 - Resurrection
+db 01	// 127 - Evolution
+db 01	// 128 - Power Up Pause
+db 01	// 129 - Speedy Attack
+db 01	// 130 - Self Dispel
+db 01	// 131 - Self Aid
+db 01	// 132 - Body Protector
+db 01	// 133 - Sharp Shooter
+db 01	// 134 - Fatal Hit
+db 01	// 135 - Drag Down
+db 01	// 136 - Big Coup
+db 01	// 137 - Magic Spot
+db 01	// 138 - Heavy Swat
+db 01	// 139 - Energy Control
+db 01	// 140 - Expanding
+db 01	// 141 - Magic Defy
+db 01	// 142 - Flash Attack
+db 01	// 143 - Nemesis
+db 01	// 144 - Self-Heal
+db 01	// 145 - Tetanus
+db 01	// 146 - Sustain Doom
+db 01	// 147 - Arouse Blow
+db 01	// 148 - Instant Heal
+db 01	// 149 - Nailed Shot
+db 01	// 150 - Aggravation
+db 01	// 151 - Dual-Weapon Storm
+db 01	// 152 - Wild Rage
+db 01	// 153 - Wild Dance
+db 01	// 154 - Jumping Airshot
+db 01	// 155 - Stamina Slug
+db 01	// 156 - Enhance Wind Spin
+db 01	// 157 - Wide Shock
+db 01	// 158 - Pollution Zone
+db 01	// 159 - Slow Rage
+db 01	// 160 - Arcane Range
+db 01	// 161 - Fantom Assault
+db 01	// 162 - Shower Time
+db 01	// 163 - Bloody Shower
+db 01	// 164 - Flame Choir
+db 01	// 165 - Earth Choir
+db 01	// 166 - Storm Choir
+db 01	// 167 - Surge Choir
+db 01	// 168 - Healing Prayer
+db 01	// 169 - Dragnet
+db 01	// 170 - Mana Decay
+db 01	// 171 - Demon Hushing
+db 01	// 172 - Sleeper Ban
+db 01	// 173 - Spy Bug
+db 01	// 174 - Hell Lord
+db 01	// 175 - Wide Guard
+db 01	// 176 - Terrible Attack
+db 01	// 177 - Apocalyptic Shot
+db 01	// 178 - Equivalent Exchange
+db 01	// 179 - Ghost Panic
+db 01	// 180 - Divine Burst
+db 01	// 181 - Dayfly Shield
+db 01	// 182 - Death Touch
+db 01	// 183 - Pantera Vision
+db 01	// 184 - Kamain Breath
+db 01	// 185 - Etain Bless
+
+
+
+lv30:
+db 02	// 111 - Tactical Formation
+db 02	// 112 - Leadership
+db 02	// 113 - Trap
+db 02	// 114 - Sprinter
+db 02	// 115 - Mana Shot
+db 02	// 116 - Aura of Peace
+db 02	// 117 - Support Spell
+db 02	// 118 - Dragon Slayer
+db 02	// 119 - Ground Boom
+db 02	// 120 - Incantation
+db 02	// 121 - Marksman Song
+db 02	// 122 - Sustain Shot
+db 02	// 123 - Prayer
+db 02	// 124 - Restore
+db 02	// 125 - Soul Burn
+db 02	// 126 - Resurrection
+db 02	// 127 - Evolution
+db 02	// 128 - Power Up Pause
+db 02	// 129 - Speedy Attack
+db 02	// 130 - Self Dispel
+db 02	// 131 - Self Aid
+db 02	// 132 - Body Protector
+db 02	// 133 - Sharp Shooter
+db 02	// 134 - Fatal Hit
+db 02	// 135 - Drag Down
+db 02	// 136 - Big Coup
+db 02	// 137 - Magic Spot
+db 02	// 138 - Heavy Swat
+db 02	// 139 - Energy Control
+db 02	// 140 - Expanding
+db 02	// 141 - Magic Defy
+db 02	// 142 - Flash Attack
+db 02	// 143 - Nemesis
+db 02	// 144 - Self-Heal
+db 02	// 145 - Tetanus
+db 02	// 146 - Sustain Doom
+db 02	// 147 - Arouse Blow
+db 02	// 148 - Instant Heal
+db 02	// 149 - Nailed Shot
+db 02	// 150 - Aggravation
+db 02	// 151 - Dual-Weapon Storm
+db 02	// 152 - Wild Rage
+db 02	// 153 - Wild Dance
+db 02	// 154 - Jumping Airshot
+db 02	// 155 - Stamina Slug
+db 02	// 156 - Enhance Wind Spin
+db 02	// 157 - Wide Shock
+db 02	// 158 - Pollution Zone
+db 02	// 159 - Slow Rage
+db 02	// 160 - Arcane Range
+db 02	// 161 - Fantom Assault
+db 02	// 162 - Shower Time
+db 02	// 163 - Bloody Shower
+db 02	// 164 - Flame Choir
+db 02	// 165 - Earth Choir
+db 02	// 166 - Storm Choir
+db 02	// 167 - Surge Choir
+db 02	// 168 - Healing Prayer
+db 02	// 169 - Dragnet
+db 02	// 170 - Mana Decay
+db 02	// 171 - Demon Hushing
+db 02	// 172 - Sleeper Ban
+db 02	// 173 - Spy Bug
+db 02	// 174 - Hell Lord
+db 02	// 175 - Wide Guard
+db 02	// 176 - Terrible Attack
+db 02	// 177 - Apocalyptic Shot
+db 02	// 178 - Equivalent Exchange
+db 02	// 179 - Ghost Panic
+db 02	// 180 - Divine Burst
+db 02	// 181 - Dayfly Shield
+db 02	// 182 - Death Touch
+db 02	// 183 - Pantera Vision
+db 02	// 184 - Kamain Breath
+db 02	// 185 - Etain Bless
+
+004846DE:
+call newmem
+
+[DISABLE]
+dealloc(newmem)
+
+004846DE:
+call 004845F0
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>8</ID>
+          <Description>"Stadium &amp; Kanos Safe Zones"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(wcmap)
+label(kanos)
+label(originalcode)
+
+newmem:
+cmp word ptr [eax+164],56
+je wcmap
+cmp word ptr [eax+164],46
+je kanos
+
+originalcode:
+mov dl,[edx+0000012D]
+jmp returnhere
+
+wcmap:
+cmp dword ptr [edx+D0],(float)120.000
+jl 0044BE69
+cmp dword ptr [edx+D0],(float)253.000
+jg 0044BE69
+cmp dword ptr [eax+D0],(float)120.000
+jl 0044BE69
+cmp dword ptr [eax+D0],(float)253.000
+jg 0044BE69
+jmp originalcode
+
+kanos:
+cmp dword ptr [edx+D8],(float)175.000
+jg originalcode
+cmp dword ptr [edx+D8],(float)155.000
+jl originalcode
+cmp dword ptr [edx+D0],(float)155.000
+jl originalcode
+cmp dword ptr [edx+D0],(float)175.000
+jl 0044BE69
+cmp dword ptr [edx+D0],(float)1485.000
+jg originalcode
+cmp dword ptr [edx+D0],(float)1465.000
+jg 0044BE69
+jmp originalcode
+
+0044BE5B:
+jmp newmem
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+
+0044BE5B:
+mov dl,[edx+0000012D]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>12</ID>
+          <Description>"Restrição de Summon/Move nos Mapas"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,2048)
+label(movereturnhere)
+label(moveoriginalcode)
+label(moveexit)
+label(movefail)
+label(summonmem)
+label(summonreturnhere)
+label(summonoriginalcode)
+label(summonexit)
+label(summonfail)
+
+newmem:
+pushad
+pushfd
+mov cx,[ebp+00000164]
+movzx ecx,cx
+mov dx,[ebp+00005820]
+movzx edx,dx
+cmp ecx,edx
+je moveoriginalcode
+cmp edx,40
+je movefail
+cmp edx,2D
+je movefail
+cmp edx,2E
+je movefail
+cmp edx,2F
+je movefail
+cmp ecx,2A
+je movefail
+cmp ecx,40
+je movefail
+cmp ecx,2D
+je movefail
+cmp ecx,2E
+je movefail
+cmp ecx,2F
+je movefail
+cmp ecx,2A
+je movefail
+
+moveoriginalcode:
+popfd
+popad
+movzx ecx,word ptr [ebp+00000164]
+
+moveexit:
+jmp movereturnhere
+
+movefail:
+popfd
+popad
+movzx ecx,word ptr [ebp+00000164]
+jmp 0048DD5F
+
+summonmem:
+pushad
+pushfd
+mov al, byte ptr [ebp+12D]
+cmp al, byte ptr [esi+12D]
+je summonoriginalcode
+mov ax,[ebp+00000164]
+movzx eax,ax
+mov bx,[esi+00000164]
+movzx ebx,bx
+cmp eax,ebx
+je summonoriginalcode
+cmp eax,40
+je summonfail
+cmp eax,2D
+je summonfail
+cmp eax,2E
+je summonfail
+cmp eax,2F
+je summonfail
+cmp eax,2A
+je summonfail
+cmp ebx,40
+je summonfail
+cmp ebx,2D
+je summonfail
+cmp ebx,2E
+je summonfail
+cmp ebx,2F
+je summonfail
+cmp ebx,2A
+je summonfail
+
+summonoriginalcode:
+popfd
+popad
+cmp dx,[esi+00000164]
+
+summonexit:
+jmp summonreturnhere
+
+summonfail:
+popfd
+popad
+jmp 0048DB38
+
+0048DC14:
+jmp newmem
+nop
+nop
+movereturnhere:
+
+0048DAA1:
+jmp summonmem
+nop
+nop
+summonreturnhere:
+
+[DISABLE]
+dealloc(newmem)
+
+0048DC14:
+movzx ecx,word ptr [ebp+00000164]
+
+0048DAA1:
+cmp dx,[esi+00000164]
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>22</ID>
+      <Description>"FFA"</Description>
+      <LastState Value="" Activated="0" RealAddress="00000000"/>
+      <Color>008000</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>14</ID>
+          <Description>"Respawn Aleatório em jungle"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,2048)
+alloc(count,1)
+label(newmem2)
+label(originalcode2)
+label(returnhere)
+label(returnhere2)
+label(exit)
+label(exit2)
+label(unos)
+label(dos)
+label(tres)
+label(quatro)
+label(one)
+label(two)
+label(three)
+label(four)
+
+newmem:
+mov [esi+000000D8],eax
+pushad
+pushfd
+cmp byte ptr [esi+164],(int)47
+jne exit
+cmp [count],0
+je unos
+cmp [count],1
+je dos
+cmp [count],2
+je tres
+cmp [count],3
+je quatro
+jmp exit
+
+exit:
+popfd
+popad
+jmp returnhere
+
+unos:
+mov [esi+D0],(float)101.344
+mov [esi+D4],(float)21.579
+mov [esi+D8],(float)108.625
+add [count],1
+jmp exit
+
+dos:
+mov [esi+D0],(float)201.125
+mov [esi+D4],(float)21.854
+mov [esi+D8],(float)29.205
+add [count],1
+jmp exit
+
+tres:
+mov [esi+D0],(float)358.802
+mov [esi+D4],(float)17.997
+mov [esi+D8],(float)173.840
+add [count],1
+jmp exit
+
+quatro:
+mov [esi+D0],(float)170.868
+mov [esi+D4],(float)21.589
+mov [esi+D8],(float)137.116
+mov [count],0
+jmp exit
+
+newmem2:
+pushad
+pushfd
+cmp byte ptr [ebx+164],(int)47
+jne originalcode2
+cmp [count],0
+je one
+cmp [count],1
+je two
+cmp [count],2
+je three
+cmp [count],3
+je four
+jmp exit2
+
+originalcode2:
+popfd
+popad
+mov [ebx+000000D0],edi
+jmp returnhere2
+
+exit2:
+popfd
+popad
+jmp returnhere2
+
+one:
+mov [ebx+D0],(float)101.344
+mov [ebx+D4],(float)21.579
+mov [ebx+D8],(float)108.625
+add [count],1
+jmp exit2
+
+two:
+mov [ebx+D0],(float)201.125
+mov [ebx+D4],(float)21.854
+mov [ebx+D8],(float)29.205
+add [count],1
+jmp exit2
+
+three:
+mov [ebx+D0],(float)358.802
+mov [ebx+D4],(float)17.997
+mov [ebx+D8],(float)173.840
+add [count],1
+jmp exit2
+
+four:
+mov [ebx+D0],(float)170.868
+mov [ebx+D4],(float)21.589
+mov [ebx+D8],(float)137.116
+mov [count],0
+jmp exit2
+
+0040D22C:
+jmp newmem
+nop
+returnhere:
+
+004163CA:
+jmp newmem2
+nop
+returnhere2:
+
+[DISABLE]
+dealloc(newmem)
+dealloc(count)
+
+0040D22C:
+mov [esi+000000D8],eax
+
+004163CA:
+mov [ebx+000000D0],edi
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"FFA Jungle"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(partyonereturnhere)
+label(partyoneoriginalcode)
+label(partyonemem)
+label(partytworeturnhere)
+label(partytwooriginalcode)
+label(partytwomem)
+label(trrreturnhere)
+label(trroriginalcode)
+label(trrmem)
+
+newmem:
+cmp word ptr [eax+164],(int)47
+je 0044BE48
+jmp originalcode
+
+originalcode:
+mov dl,[edx+0000012D]
+jmp returnhere
+
+partyonemem:
+mov dl, byte ptr [edi+164]
+cmp dl,40
+je 004678D6
+cmp dl,2D
+je 004678D6
+cmp dl,2E
+je 004678D6
+cmp dl,2F
+je 004678D6
+cmp dl,2A
+je 004678D6
+cmp word ptr ds:[ebp+164],(int)47
+je 004678CD
+jmp partyoneoriginalcode
+
+partyoneoriginalcode:
+mov dl,[edi+0000012D]
+jmp partyonereturnhere
+
+partytwomem:
+mov dl, byte ptr [esi+164]
+cmp dl,40
+je 004677A7
+cmp dl,2D
+je 004677A7
+cmp dl,2E
+je 004677A7
+cmp dl,2F
+je 004677A7
+cmp dl,2A
+je 004677A7
+mov dl,[esi+0000012D]
+cmp word ptr ds:[ebp+164],(int)47
+je 0046779D
+jmp partytwooriginalcode
+
+partytwooriginalcode:
+mov dl,[esi+0000012D]
+jmp partytworeturnhere
+
+trrmem:
+cmp word ptr ds:[eax+164],(int)47
+je 00465E18
+jmp trroriginalcode
+
+trroriginalcode:
+mov cl,[ebp+0000012D]
+jmp trrreturnhere
+
+0044BE5B:
+jmp newmem
+nop
+returnhere:
+
+004678BF:
+jmp partyonemem
+nop
+partyonereturnhere:
+
+0046778F:
+jmp partytwomem
+nop
+partytworeturnhere:
+
+004664C3:
+jmp trrmem
+nop
+trrreturnhere:
+
+[DISABLE]
+dealloc(newmem)
+
+0044BE5B:
+mov dl,[edx+0000012D]
+
+004678BF:
+mov dl,[edi+0000012D]
+
+0046778F:
+mov dl,[esi+0000012D]
+
+004664C3:
+mov cl,[ebp+0000012D]
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>24</ID>
+      <Description>"Outros"</Description>
+      <LastState Value="" Activated="0" RealAddress="00000000"/>
+      <Color>004080</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>23</ID>
+          <Description>"Desativar cobrança de valor de enchant"</Description>
+          <LastState Activated="0"/>
+          <Color>000000</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// BBM-Desenvolvimentos-[Dev]Bruno-B.A-ShaiyaSpiritOfHero//
+[ENABLE]
+
+0045FC73:
+nop
+nop
+nop
+nop
+nop
+nop
+
+
+[DISABLE]
+
+0045FC73:
+mov [ebx+00000140],ecx
+
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

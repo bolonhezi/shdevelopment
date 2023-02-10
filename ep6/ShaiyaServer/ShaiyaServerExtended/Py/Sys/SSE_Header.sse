@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+#server
+# TCP Server Code
+#host="127.0.0.1"                # Set the server address to variable host
+from socket import *                # Imports socket module
+import sys
+import clr
+import thread
+import time
+import imp
+clr.AddReference('System.Data')
+from System.Data.SqlClient import SqlConnection, SqlParameter
+sys.path.append('SCE_Libs')
+import os

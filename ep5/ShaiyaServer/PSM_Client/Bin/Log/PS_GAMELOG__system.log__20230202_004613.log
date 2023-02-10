@@ -1,0 +1,16 @@
+2023-02-02 00:46:13 PS_GAMELOG__system log start (GameLog01)
+Module list:
+C:\ShaiyaServer\PSM_Client\Bin\ps_gameLog.exe, loaded at 0x00400000 - 10/10/18 16:33:52
+2023-02-02 00:46:15 connect game
+2023-02-02 00:58:09 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-02 00:58:09 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin',1,1,'Dev', 70,159324304,1, 1676.254272,36.493706,1721.457153, '2023-02-02 00:58:09' ,141, 95,1,5,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Death's Touch Lv1',NULL,NULL,NULL
+2023-02-02 00:58:09 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-02 00:58:09 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin',1,1,'Dev', 70,159324304,1, 1676.254272,36.493706,1721.457153, '2023-02-02 00:58:09' ,141, 95,2,6,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Death's Touch Lv2',NULL,NULL,NULL
+2023-02-02 00:58:09 err=-1, [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 's'., SQL STATE: 42000, NATIVE ERROR: 102 (0x66)
+2023-02-02 00:58:09 DBWrite::LogGame: err=-1, query=EXEC usp_Insert_Action_Log_E 'admin',1,1,'Dev', 70,159324304,1, 1676.254272,36.493706,1721.457153, '2023-02-02 00:58:09' ,141, 95,3,7,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Death's Touch Lv3',NULL,NULL,NULL
+2023-02-02 01:15:16 1 1 SAgent::Disconnect: (4, 64)
+2023-02-02 01:15:16 1 1 T=000:29:00:000, RC=289,RCS=0, RB=37011,RBS=21, SC=5,SCS=0, SB=20,SBS=0
+2023-02-02 01:15:16 disconnect game
+2023-02-02 01:15:16 3 1 SERVICE_CONTROL_STOP
+2023-02-02 01:15:16 PS_GAMELOG__system log end (GameLog01)
+2023-02-02 01:15:16 3 1 SService::ServiceCtrlDispatcher(): service shutdown

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Shaiya\Entity\Actor.hpp" />
+    <ClInclude Include="include\Shaiya\Entity\Attributes.hpp" />
+    <ClInclude Include="include\Shaiya\Entity\ActorRepository.hpp" />
+    <ClInclude Include="include\Shaiya\Entity\Movement\MovementQueue.hpp" />
+    <ClInclude Include="include\Shaiya\Entity\Movement\Step.hpp" />
+    <ClInclude Include="include\Shaiya\Entity\Position.hpp" />
+    <ClInclude Include="include\Shaiya\Database\nanodbc.hpp" />
+    <ClInclude Include="include\Shaiya\Entity\RenderInfo.hpp" />
+    <ClInclude Include="include\Shaiya\GameWorld.hpp" />
+    <ClInclude Include="include\Shaiya\Models\CBitArray.hpp" />
+    <ClInclude Include="include\Shaiya\Models\CGuild.hpp" />
+    <ClInclude Include="include\Shaiya\Models\CItem.hpp" />
+    <ClInclude Include="include\Shaiya\Models\CMap.hpp" />
+    <ClInclude Include="include\Shaiya\Models\CParty.hpp" />
+    <ClInclude Include="include\Shaiya\Models\Cups\CupsMemoryBlock.hpp" />
+    <ClInclude Include="include\Shaiya\Models\Cups\CupsPlayerList.hpp" />
+    <ClInclude Include="include\Shaiya\Models\CUser.hpp" />
+    <ClInclude Include="include\Shaiya\Models\CZone.hpp" />
+    <ClInclude Include="include\Shaiya\Models\SNode.hpp" />
+    <ClInclude Include="include\Shaiya\Models\stItemContainer.hpp" />
+    <ClInclude Include="include\Shaiya\Models\stItemInfo.hpp" />
+    <ClInclude Include="include\Shaiya\Models\stMapOpenTime.hpp" />
+    <ClInclude Include="include\Shaiya\Models\stMapPos.hpp" />
+    <ClInclude Include="include\Shaiya\Models\stPartyUser.hpp" />
+    <ClInclude Include="include\Shaiya\Packets\PacketRepository.hpp" />
+    <ClInclude Include="include\Shaiya\Packets\Structures\AccountPoints.hpp" />
+    <ClInclude Include="include\Shaiya\Packets\Structures\AddLocalUser.hpp" />
+    <ClInclude Include="include\Shaiya\Packets\Structures\GameNotice.hpp" />
+    <ClInclude Include="include\Shaiya\Packets\Structures\HealSkill.hpp" />
+    <ClInclude Include="include\Shaiya\Packets\Structures\MobMaskShape.hpp" />
+    <ClInclude Include="include\Shaiya\Utils\ItemUtils.hpp" />
+    <ClInclude Include="include\Shaiya\Utils\Memory\Hook.hpp" />
+    <ClInclude Include="include\Shaiya\Utils\MobUtils.hpp" />
+    <ClInclude Include="include\Shaiya\Utils\NpcUtils.hpp" />
+    <ClInclude Include="include\Shaiya\Utils\UserUtils.hpp" />
+    <ClInclude Include="src\Shaiya\Models\CBitArray.hpp" />
+    <ClInclude Include="src\Shaiya\Models\CGuild.hpp" />
+    <ClInclude Include="src\Shaiya\Models\CItem.hpp" />
+    <ClInclude Include="src\Shaiya\Models\CParty.hpp" />
+    <ClInclude Include="src\Shaiya\Models\Cups\CupsMemoryBlock.hpp" />
+    <ClInclude Include="src\Shaiya\Models\Cups\CupsPlayerList.hpp" />
+    <ClInclude Include="src\Shaiya\Models\CUser.hpp" />
+    <ClInclude Include="src\Shaiya\Models\SNode.hpp" />
+    <ClInclude Include="src\Shaiya\Models\stMapOpenTime.hpp" />
+    <ClInclude Include="src\Shaiya\Models\stMapPos.hpp" />
+    <ClInclude Include="src\Shaiya\Models\stPartyUser.hpp" />
+    <ClInclude Include="src\Shaiya\Packets\Structures\AccountPoints.hpp" />
+    <ClInclude Include="src\Shaiya\Packets\Structures\GameNotice.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Shaiya\Entity\Actor.cpp" />
+    <ClCompile Include="src\Shaiya\Database\nanodbc.cpp" />
+    <ClCompile Include="src\Shaiya\Entity\ActorRepository.cpp" />
+    <ClCompile Include="src\Shaiya\Entity\Movement\MovementQueue.cpp" />
+    <ClCompile Include="src\Shaiya\Entity\RenderInfo.cpp" />
+    <ClCompile Include="src\Shaiya\GameWorld.cpp" />
+    <ClCompile Include="src\Shaiya\Utils\ItemUtils.cpp" />
+    <ClCompile Include="src\Shaiya\Utils\NpcUtils.cpp" />
+    <ClCompile Include="src\Shaiya\Packets\PacketRepository.cpp" />
+    <ClCompile Include="src\Shaiya\Utils\Memory\Hook.cpp" />
+    <ClCompile Include="src\Shaiya\Utils\MobUtils.cpp" />
+    <ClCompile Include="src\Shaiya\Utils\UserUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\Shaiya\Packets\Structures\SendShape.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{D84AF19C-C8D2-4FAB-AB34-E98E4C5D0FD0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ShaiyaLibrary</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;SHAIYALIBRARY_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;C:\Users\Cups\Downloads\boost_1_70_0\boost_1_70_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\Users\Cups\Downloads\boost_1_70_0\boost_1_70_0\bin.v2\libs</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;SHAIYALIBRARY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;SHAIYALIBRARY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;SHAIYALIBRARY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

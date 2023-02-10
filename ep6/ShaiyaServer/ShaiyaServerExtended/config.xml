@@ -1,0 +1,20 @@
+<configuration>
+<TableMaxRows>200</TableMaxRows>
+<PSMClient>C:/ShaiyaServer/PSM_Client</PSMClient>
+<KeepUpdatingProc>True</KeepUpdatingProc>
+<DbUser>Holyblade</DbUser>
+<DbPass>Ampota88</DbPass>
+<DbHost>127.0.0.1</DbHost>
+<ServerName>Shaiya Extended Panel</ServerName>
+<InputCmdPrefix>/</InputCmdPrefix>
+<PlayerCmdPrefix>!</PlayerCmdPrefix>
+<IsDisplayAppChat>True</IsDisplayAppChat>
+<IsDisplayDiscon>True</IsDisplayDiscon>
+<IsDisplayConn>True</IsDisplayConn>
+<IsDisplayPlayerCmd>True</IsDisplayPlayerCmd>
+<IsDisplayAdmCmd>True</IsDisplayAdmCmd>
+<IsDisplayWelcomeMsg>True</IsDisplayWelcomeMsg>
+<IsDisplayPvPKill>True</IsDisplayPvPKill>
+<IsDisplayPvPDeaths>True</IsDisplayPvPDeaths>
+<IsDisplayUnknowEvents>True</IsDisplayUnknowEvents>
+</configuration>

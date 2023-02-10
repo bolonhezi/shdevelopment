@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>472</ID>
+      <Description>"FIX RUNE CUT"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>// delay runes after skills
+[ENABLE]
+alloc(bootleggery,128)
+alloc(arena,128)
+alloc(party_summon,128)
+alloc(movement,128)
+alloc(capital,128)
+alloc(guild_house,128)
+
+bootleggery:
+cmp dword ptr [ebp+00001270],02
+je 0047468A
+// original
+cmp dword ptr [eax+000001A4],00
+jmp 00473EDE
+
+arena:
+cmp dword ptr [ebp+00001270],02
+je 0047468A
+// original
+cmp dword ptr [eax+000001A4],00
+jmp 00474004
+
+party_summon:
+cmp dword ptr [ebp+00001270],02
+je 0047468A
+// original
+cmp dword ptr [ebp+000058B8],00
+jmp 00473407
+
+movement:
+cmp dword ptr [ebp+00001270],02
+je 0047468A
+// original
+cmp dword ptr [ebp+000015C0],00
+jmp 0047366B
+
+capital:
+cmp dword ptr [ebp+00001270],02
+je 0047468A
+// original
+cmp dword ptr [eax+000001A4],00
+jmp 00473DB7
+
+guild_house:
+cmp dword ptr [ebp+00001270],02
+je 004742B6
+// original
+cmp dword ptr [eax+000001A4],06
+jmp 0047419D
+
+00473ED7:
+jmp bootleggery
+nop
+nop
+
+00473FFD:
+jmp arena
+nop
+nop
+
+00473400:
+jmp party_summon
+nop
+nop
+
+00473664:
+jmp movement
+nop
+nop
+
+00473DB0:
+jmp capital
+nop
+nop
+
+00474196:
+jmp guild_house
+nop
+nop
+
+[DISABLE]
+dealloc(bootleggery)
+dealloc(arena)
+dealloc(party_summon)
+dealloc(movement)
+dealloc(capital)
+dealloc(guild_house)
+00473ED7:
+cmp dword ptr [eax+000001A4],00
+
+00473FFD:
+cmp dword ptr [eax+000001A4],00
+
+00473400:
+cmp dword ptr [ebp+000058B8],00
+
+00473664:
+cmp dword ptr [ebp+000015C0],00
+
+00473DB0:
+cmp dword ptr [eax+000001A4],00
+
+00474196:
+cmp dword ptr [eax+000001A4],06
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

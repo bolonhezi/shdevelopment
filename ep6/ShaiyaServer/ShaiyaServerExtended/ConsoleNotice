@@ -1,0 +1,13 @@
+<configuration>
+<SQL>
+DECLARE @Input varchar(MAX) = @Msg
+DECLARE @msgg varchar(MAX) = N'/nt '+@Input
+DECLARE	@return_value int
+
+EXEC	@return_value = [dbo].[Command]
+		@serviceName = N'ps_game',
+		@cmmd = @msgg
+
+SELECT	'Return Value' = @return_value
+</SQL>
+</configuration>

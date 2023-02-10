@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="29">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"Prevent SQL Injection"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>//prevent notice injection by Bowie 06/2020
+[ENABLE]
+//NoticeAdmin
+0045A165:
+jmp 0045A781
+nop
+nop
+
+//NoticeNormal
+0045A293:
+jmp 0045A781
+nop
+nop
+
+//NoticeTo
+0045A3E4:
+jmp 0045A781
+nop
+nop
+
+//NoticeMap
+0045A507:
+jmp 0045A781
+nop
+nop
+nop
+
+//NoticeCountry
+0045A635:
+jmp 0045A781
+nop
+nop
+nop
+
+//NoticeAll
+0045A759:
+jmp 0045A781
+nop
+nop
+
+//NoticeWarning
+0045A98C:
+jmp 0045A99D
+nop
+nop
+
+[DISABLE]
+0045A165:
+mov edx,[esp+18]
+mov ecx,[ebp+0C]
+
+0045A293:
+mov eax,[esp+10]
+mov edx,[ebp+08]
+
+0045A3E4:
+mov ecx,[esp+18]
+mov edx,[ebp+08]
+
+0045A507:
+mov edx,[esp+10]
+mov byte ptr [ebx+68],00
+
+0045A635:
+mov edx,[esp+18]
+mov byte ptr [ebx+69],00
+
+0045A759:
+mov eax,[esp+10]
+mov edx,[ebp+08]
+
+0045A98C:
+mov ebx,[esp+10]
+push edx
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change of jbe ps_game.exe+5A9B2</Description>
+      <AddressString>ps_game.exe+5A90F</AddressString>
+      <Before>
+        <Byte>8A</Byte>
+        <Byte>43</Byte>
+        <Byte>17</Byte>
+        <Byte>3C</Byte>
+        <Byte>01</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>86</Byte>
+        <Byte>9D</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>3C</Byte>
+        <Byte>80</Byte>
+        <Byte>0F</Byte>
+        <Byte>87</Byte>
+        <Byte>95</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of je ps_game.exe+5A9B2</Description>
+      <AddressString>ps_game.exe+5A93A</AddressString>
+      <Before>
+        <Byte>C0</Byte>
+        <Byte>89</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>0C</Byte>
+      </Before>
+      <Actual>
+        <Byte>74</Byte>
+        <Byte>76</Byte>
+      </Actual>
+      <After>
+        <Byte>8A</Byte>
+        <Byte>4B</Byte>
+        <Byte>17</Byte>
+        <Byte>0F</Byte>
+        <Byte>B6</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of jne ps_game.exe+5AA0B</Description>
+      <AddressString>ps_game.exe+5A9E9</AddressString>
+      <Before>
+        <Byte>FF</Byte>
+        <Byte>8B</Byte>
+        <Byte>F8</Byte>
+        <Byte>85</Byte>
+        <Byte>FF</Byte>
+      </Before>
+      <Actual>
+        <Byte>75</Byte>
+        <Byte>20</Byte>
+      </Actual>
+      <After>
+        <Byte>56</Byte>
+        <Byte>B8</Byte>
+        <Byte>08</Byte>
+        <Byte>FA</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov ebx,[esp+10]</Description>
+      <AddressString>ps_game.exe+5A98C</AddressString>
+      <Before>
+        <Byte>14</Byte>
+        <Byte>C6</Byte>
+        <Byte>43</Byte>
+        <Byte>7B</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>5C</Byte>
+        <Byte>24</Byte>
+        <Byte>10</Byte>
+      </Actual>
+      <After>
+        <Byte>52</Byte>
+        <Byte>BF</Byte>
+        <Byte>40</Byte>
+        <Byte>AC</Byte>
+        <Byte>4E</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+</CheatTable>

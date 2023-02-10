@@ -1,0 +1,88 @@
+Es gibt zwar schon einige gute Scripte doch ich fand die sind viel zu umständlich und das die Performance nicht grad gut ist.
+Darum hab ich ein sehr einfaches Script zum Aufdecken und Löschen!
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+----Sondos Dub´s aufdecken Script-----
+----sehr einfacher code, man kann nach belieben die spalten für mehr informationen ergänzen---
+----einfach nach Select die spalten einfügen die noch benötigt werden---
+
+----Character--Items--Überprüfen----- 
+
+USE PS_GameData
+SELECT ItemUID, CharID, Craftname, Count 
+
+FROM dbo.CharItems 
+WHERE Exists (
+SELECT ItemUID FROM dbo.Charitems dub WHERE dbo.Charitems.ItemUID = dub.ItemUID and dbo.Charitems.CharID <> dub.CharID )
+ORDER BY CharId;
+
+----Warenlager--Items--Überprüfen----
+
+USE PS_GameData
+SELECT ItemUID, UserUID, Craftname, Count 
+FROM dbo.UserStoredItems 
+WHERE Exists (
+SELECT ItemUID FROM dbo.UserStoredItems dub WHERE dbo.UserStoredItems.ItemUID = dub.ItemUID and dbo.UserStoredItems.UserUID <> dub.UserUID )
+ORDER BY UserUID;
+
+----Auctionshaus--überprüfen----
+
+USE PS_GameData
+SELECT ItemUID, MarketID, Craftname, Count 
+FROM dbo.MarketItems 
+WHERE Exists (
+SELECT ItemUID FROM dbo.MarketItems dub WHERE dbo.MarketItems.ItemUID = dub.ItemUID and dbo.MarketItems.MarketID <> dub.MarketID )
+ORDER BY MarketID;
+			
+----Gildenlager--überprüfen----			
+
+USE PS_GameData
+SELECT ItemUID, GuildID, Craftname, Count 
+FROM dbo.GuildStoredItems 
+WHERE Exists (
+SELECT ItemUID FROM dbo.GuildStoredItems dub WHERE dbo.GuildStoredItems.ItemUID = dub.ItemUID and dbo.GuildStoredItems.GuildID <> dub.GuildID )
+ORDER BY GuildID;
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Beim Löschen geh ich sehr aggressiv vor! Ich lösche nicht nur die Gedupten Items sondern auch die Originale.
+Ich Denke das gibt dennen ein bischen mehr zu denken und ist eine gute Abschreckung.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---Löscht gedubte und die Originale---
+
+
+---Character-Items-Löschen---
+USE PS_GameData
+DELETE FROM dbo.CharItems
+WHERE EXISTS (SELECT ItemUID FROM dbo.Charitems dub WHERE dbo.Charitems.ItemUID = dub.ItemUID and dbo.Charitems.CharID <> dub.CharID);
+
+---Warenlager-Items-Löschen---
+USE PS_GameData
+DELETE FROM dbo.UserStoredItems
+WHERE EXISTS (SELECT ItemUID FROM dbo.UserStoredItems dub WHERE dbo.UserStoredItems.ItemUID = dub.ItemUID and dbo.UserStoredItems.UserUID <> dub.UserUID);
+
+---Auctionshaus-Items-Löschen---
+USE PS_GameData
+DELETE FROM dbo.MarketItems
+WHERE EXISTS (SELECT ItemUID FROM dbo.MarketItems dub WHERE dbo.MarketItems.ItemUID = dub.ItemUID and dbo.MarketItems.MarketID <> dub.MarketID);
+
+---Gildenlager-Items-Löschen---
+USE PS_GameData
+DELETE FROM dbo.GuildStoredItems
+WHERE EXISTS (SELECT ItemUID FROM dbo.GuildStoredItems dub WHERE dbo.GuildStoredItems.ItemUID = dub.ItemUID and dbo.GuildStoredItems.GuildID <> dub.GuildID);
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+

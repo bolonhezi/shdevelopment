@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="26">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"GM ability to attack both factions"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(exit)
+
+newmem:
+cmp byte ptr [eax+5808],#10
+jb 00457E35
+cmp dl,[eax+0000012D]
+
+exit:
+jmp returnhere
+
+"ps_game.exe"+57E2D:
+jmp newmem
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+"ps_game.exe"+57E2D:
+cmp dl,[eax+0000012D]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>27</ID>
+      <Description>"Cross Trade AH v2"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+nop
+
+exit:
+jmp returnhere
+
+"ps_game.exe"+7D9B6:
+jmp newmem
+nop
+returnhere:
+
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"ps_game.exe"+7D9B6:
+jne ps_game.exe+7E0DA
+//Alt: db 0F 85 1E 07 00 00
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>35</ID>
+      <Description>"Cross Faction Inspect"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+00477d49:
+db 90 90 90 90 90 90
+
+
+
+[DISABLE]
+00477d49:
+db 0F 85 F9 02 00 00
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"Cross Faction Whisper"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+0047f629:
+db 90 90 90 90 90 90
+
+0047ff69:
+db 90 90 90 90 90 90
+
+
+[DISABLE]
+0047f629:
+db 0F 85 DF 00 00 00
+
+0047ff69:
+db 0F 85 DF 00 00 00
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"Script"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//pid
+"ps_game.exe"+670E9:
+jmp ps_game.exe+672F7
+nop
+
+//ress
+"ps_game.exe"+668B7:
+jmp ps_game.exe+66AC4
+nop
+
+"ps_game.exe"+662DF:
+jmp ps_game.exe+6644A
+nop
+
+//link
+"ps_game.exe"+6E5D0:
+db 90 90 90 90 90 90
+
+//enchant
+"ps_game.exe"+6CCEA:
+db 90 90 90 90 90 90
+
+//repair items
+"ps_game.exe"+71DB2:
+db 90 90 90 90 90 90
+
+//extract
+"ps_game.exe"+70602:
+db 90 90 90 90 90 90
+
+[DISABLE]
+"ps_game.exe"+670E9:
+jne ps_game.exe+672F7
+
+"ps_game.exe"+668B7:
+jne ps_game.exe+66AC4
+
+"ps_game.exe"+662DF:
+jne ps_game.exe+6644A
+
+"ps_game.exe"+6E5D0:
+mov [ebp+00000140],eax
+
+"ps_game.exe"+6CCEA:
+mov [ebp+00000140],ecx
+
+"ps_game.exe"+71DB2:
+mov [ebp+00000140],ecx
+
+"ps_game.exe"+70602:
+sub [edi+00000140],edx
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"GM both faction chats"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+cmp word [ecx+5808],0B
+JL "ps_game.exe"+27944
+
+originalcode:
+cmp dl,[ecx+0000012D]
+
+exit:
+jmp returnhere
+
+"ps_game.exe"+27938:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"ps_game.exe"+27938:
+cmp dl,[ecx+0000012D]
+//Alt: db 3A 91 2D 01 00 00
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>18</ID>
+      <Description>"union lead summon raid"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+
+
+originalcode:
+call ps_game.exe+4ECF0
+push eax
+push ecx
+mov eax,[edi+17f4]
+mov ecx,[eax+0c]
+imul ecx,ecx,8
+add  ecx,18
+mov  ecx,[eax+ecx]
+cmp edi,ecx
+pop ecx
+pop eax
+je ps_game.exe+9e4ea
+
+exit:
+jmp returnhere
+
+"ps_game.exe"+9E4E1:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"ps_game.exe"+9E4E1:
+call ps_game.exe+4ECF0
+//Alt: db E8 0A 08 FB FF
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"trade exploit fix"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(exit)
+
+newmem:
+call ps_game.exe+ED0E0
+
+push 04
+lea eax,[esp+18]
+push eax
+mov ecx,ebx
+mov byte ptr [esp+1C],0A
+mov byte ptr [esp+1D],0A
+mov byte ptr [esp+1E],01
+mov byte ptr [esp+1F],00
+call 004ED0E0
+push 04
+lea eax,[esp+18]
+push eax
+mov ecx,ebx
+mov byte ptr [esp+1C],0A
+mov byte ptr [esp+1D],0A
+mov byte ptr [esp+1E],02
+mov byte ptr [esp+1F],00
+call 004ED0E0
+push 04
+lea eax,[esp+18]
+push eax
+mov ecx,esi
+mov byte ptr [esp+1C],0A
+mov byte ptr [esp+1D],0A
+mov byte ptr [esp+1E],01
+mov byte ptr [esp+1F],00
+call 004ED0E0
+push 04
+lea eax,[esp+18]
+push eax
+mov ecx,esi
+mov byte ptr [esp+1C],0A
+mov byte ptr [esp+1D],0A
+mov byte ptr [esp+1E],02
+mov byte ptr [esp+1F],00
+call 004ED0E0
+
+exit:
+jmp returnhere
+
+"ps_game.exe"+7E007:
+jmp newmem
+returnhere:
+ 
+[DISABLE]
+dealloc(newmem)
+"ps_game.exe"+7E007:
+call ps_game.exe+ED0E0
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>38</ID>
+      <Description>"Fix drop of helmets and capes"</Description>
+      <LastState Activated="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>// Credits to Eric-Dutra16 and andr3y_you96
+[ENABLE]
+004BAFC8:
+db 90 90 90 90 90 90 90 90 90
+
+004BAFD1:
+db 90 90 90 90 90 90 90 90 90
+
+00473BBD:
+db 90 90 90 90 90 90 90 90 90 90 90 90 90
+
+[DISABLE]
+004BAFC8:
+cmp eax,10
+je 004BB47A
+
+004BAFD1:
+cmp eax,18
+je 004BB47A
+
+00473BBD:
+cmp dword ptr [eax+000000A0],18
+je 0047468A
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
