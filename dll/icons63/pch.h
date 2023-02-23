@@ -1,13 +1,19 @@
-// pch.h: This is a precompiled header file.
-// Files listed below are compiled only once, improving build performance for future builds.
-// This also affects IntelliSense performance, including code completion and many code browsing features.
-// However, files listed here are ALL re-compiled if any one of them is updated between builds.
-// Do not add files here that you will be updating frequently as this negates the performance advantage.
+#ifdef PCH_EXPORTS
+#define PCH_H __declspec(dllexport)
 
-#ifndef PCH_H
-#define PCH_H
+#define WIN32_LEAN_AND_MEAN
+#include <sdkddkver.h>
+#include <windows.h>
+//main function
+void PCH_H iconFunc();
+//hook function
+BOOL Hook(void * pAddr, void * pNAddr, int len = 5);
+/////////////////////////
+static DWORD bIconRet = 0x518275;
+static DWORD iconRend = 0x4B7240;
+static DWORD overRend = 0x4B6180;
+static DWORD bIconJMP = 0x518287;
+static DWORD sIconRet = 0x4FFCE8;
+static DWORD sIconJMP = 0x4FFCF7;
 
-// add headers that you want to pre-compile here
-#include "framework.h"
-
-#endif //PCH_H
+#endif
