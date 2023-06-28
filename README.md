@@ -1,4 +1,4 @@
-## Shaiya
+# Shaiya
 
 Shaiya is a fantasy MMORPG developed by SONOV Entertainment. The game offers an exciting experience with intense player-versus-player battles, engaging PvP modes, and a wide variety of content to explore.
 
